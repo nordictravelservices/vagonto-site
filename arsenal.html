@@ -1,0 +1,162 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Arsenal hjemmekamper</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: Vagonto-profil. Topplinje med logo, én fremhevet kamp, kampprogrammet som liste, tre steg. */
+:root{
+  --ground:#F4F6F1;--surface:#FFFFFF;--surface-2:#E7ECE5;--ink:#143528;--ink-soft:#4C6558;--ink-faint:#7C9186;
+  --line:#DDE4DB;--hot:#17698F;--brand:#2E9BD6;--panel:#143528;--panel-ink:#F1F3EE;--panel-soft:#B9CCC1;--on-hot:#FFFFFF;
+  --shadow:0 2px 6px rgba(20,53,40,.06),0 18px 40px rgba(20,53,40,.12);--r:14px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){color-scheme:dark;
+  --ground:#0E1712;--surface:#16241D;--surface-2:#22322A;--ink:#E7EEE8;--ink-soft:#A3B6AA;--ink-faint:#7A8D82;--line:#2C3A33;--hot:#6EC1EA;--brand:#6EC1EA;--panel:#16241D;--panel-ink:#F1F3EE;--panel-soft:#A3B6AA;--on-hot:#06202F;
+  --shadow:0 2px 6px rgba(0,0,0,.4),0 18px 40px rgba(0,0,0,.45)} }
+:root[data-theme="dark"]{color-scheme:dark;
+  --ground:#0E1712;--surface:#16241D;--surface-2:#22322A;--ink:#E7EEE8;--ink-soft:#A3B6AA;--ink-faint:#7A8D82;--line:#2C3A33;--hot:#6EC1EA;--brand:#6EC1EA;--panel:#16241D;--panel-ink:#F1F3EE;--panel-soft:#A3B6AA;--on-hot:#06202F;
+  --shadow:0 2px 6px rgba(0,0,0,.4),0 18px 40px rgba(0,0,0,.45)}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:"Poppins","Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin-inline:auto;padding-inline:16px;padding-block:0 56px;display:flex;flex-direction:column;gap:36px}
+h1,h2,h3{margin:0;line-height:1.08;letter-spacing:-.025em;text-wrap:balance;font-weight:800}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--hot);outline-offset:3px}
+.kick{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--hot);font-weight:600}
+
+.top{display:flex;align-items:center;gap:18px;padding:18px 0 0;flex-wrap:wrap}
+.top img{height:34px;width:auto;display:block}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .top img{filter:brightness(0) invert(1)}}
+:root[data-theme="dark"] .top img{filter:brightness(0) invert(1)}
+.spacer{flex:1}
+.demo{font-size:12.5px;color:var(--ink-soft);background:var(--surface-2);border-radius:999px;padding:6px 14px}
+
+header.intro{display:flex;flex-direction:column;gap:12px}
+h1{font-size:clamp(34px,6vw,62px)}
+h1 em{font-style:normal;color:var(--brand)}
+.lede{font-size:17.5px;color:var(--ink-soft);max-width:46ch}
+
+.btn{display:inline-flex;align-items:center;padding:13px 24px;border-radius:999px;font-weight:600;font-size:15px;white-space:nowrap;background:var(--hot);color:var(--on-hot);transition:transform .12s ease}
+.btn:hover{transform:translateY(-1px)}
+
+.next{background:var(--panel);color:var(--panel-ink);border-radius:24px;padding:36px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;border:1px solid var(--line)}
+.next .kick{color:#9EDCF5}
+.next h2{font-size:clamp(28px,5vw,46px);margin-block:10px 8px;color:#fff}
+.next .when{font-weight:600;font-size:16.5px}
+.next ul{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:6px;color:var(--panel-soft);font-size:15px;max-width:44ch}
+.next ul strong{color:var(--panel-ink);font-weight:600}
+.next .btn{background:var(--brand);color:#06202F}
+
+.sec{display:flex;flex-direction:column;gap:16px}
+.sec h2{font-size:clamp(24px,3.2vw,34px)}
+.fixtures{list-style:none;margin:0;padding:0 20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+.fx{display:grid;grid-template-columns:9.5em 1fr auto;gap:4px 16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.fx:last-child{border-bottom:0}
+.fx .date{font-variant-numeric:tabular-nums;font-size:14.5px;color:var(--ink-soft)}
+.fx .opp{font-weight:700;font-size:17px;line-height:1.25;min-width:0}
+.fx .meta{display:block;font-size:13px;font-weight:400;color:var(--ink-faint)}
+.fx .state{font-size:13px;color:var(--ink-faint);white-space:nowrap}
+.fx.live .state a{font-size:14px;font-weight:600;color:var(--hot)}
+.note{font-size:13px;color:var(--ink-faint)}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.steps li::before{content:"0" counter(s);font-weight:800;font-size:13px;letter-spacing:.14em;color:var(--hot)}
+.steps h3{font-size:20px}
+.steps p{font-size:14.5px;color:var(--ink-soft);line-height:1.5}
+
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:13px;color:var(--ink-faint)}
+@media (max-width:640px){
+  .next{grid-template-columns:1fr;padding:26px 20px}
+  .fx{grid-template-columns:1fr auto}
+  .fx .date{grid-column:1 / -1;font-size:13px}
+  .steps{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+
+<div class="wrap">
+  <div class="top">
+    <img src="img/vagonto-logo.png" alt="Vagonto">
+    <span class="spacer"></span>
+    <span class="demo">Demo – bare Everton-kampen kan bestilles</span>
+  </div>
+
+  <header class="intro">
+    <p class="kick">Sesongen 2026/27 · Emirates Stadium, London</p>
+    <h1>Arsenal <em>hjemme</em> på Emirates</h1>
+    <p class="lede">Kampbillett og hotell i London i én bestilling. Plassene er sammen, hotellet er valgt for deg, og vil du ha fly, legger du det til selv.</p>
+  </header>
+
+  <section class="next" aria-labelledby="nextTitle">
+    <div>
+      <p class="kick">Neste kamp · Premier League</p>
+      <h2 id="nextTitle">Arsenal – Everton</h2>
+      <p class="when">Lørdag 24. oktober 2026 · avspark 15:00</p>
+      <ul>
+        <li><strong>To billetter sammen</strong> på langsiden</li>
+        <li><strong>To netter med frokost</strong> på Hilton London Angel Islington, 23.–25. oktober</li>
+        <li><strong>Fly etter eget valg</strong> – legg det til når du booker, eller ordne det selv</li>
+      </ul>
+    </div>
+    <a class="btn" id="ctaEverton" href="https://airticketcollective.paquetedinamico.com/no/idea/66057330/arsenal-everton-pa-emirates-london">Se reisen</a>
+  </section>
+
+  <section class="sec" aria-labelledby="fxTitle">
+    <h2 id="fxTitle">Alle hjemmekampene</h2>
+    <ol class="fixtures" id="fixtures"></ol>
+    <p class="note">Kamper merket «dato ikke endelig» kan bli flyttet av hensyn til TV-sendinger.</p>
+  </section>
+
+  <section class="sec" aria-labelledby="howTitle">
+    <h2 id="howTitle">Slik booker du</h2>
+    <ol class="steps">
+      <li><h3>Velg kamp</h3><p>Hver kamp har sin egen reise med billetter og hotell klart.</p></li>
+      <li><h3>Tilpass</h3><p>Bytt hotell, legg til en natt eller endre antall reisende.</p></li>
+      <li><h3>Legg til fly</h3><p>Velg avreiseby og fly i samme bestilling, hvis du vil ha det med.</p></li>
+    </ol>
+  </section>
+
+  <footer>Kamplisten er hentet fra billettleverandøren 12. oktober 2026. Vagonto er en uavhengig reisearrangør og er ikke tilknyttet Arsenal FC. Lenken til reisen virker foreløpig bare for innloggede.</footer>
+</div>
+
+<script>
+const URL_EVERTON = "https://airticketcollective.paquetedinamico.com/no/idea/66057330/arsenal-everton-pa-emirates-london";
+// [dato, motstander, turnering, dato endelig?, lenke]
+const KAMPER = [
+  ["2026-10-24","Everton","Premier League",true,URL_EVERTON],
+  ["2026-11-07","Hull City","Premier League",true],
+  ["2026-11-24","Borussia Dortmund","Champions League",true],
+  ["2026-11-29","Manchester City","Premier League",true],
+  ["2026-12-09","Real Madrid","Champions League",true],
+  ["2026-12-12","Bournemouth","Premier League",false],
+  ["2026-12-19","Manchester United","Premier League",false],
+  ["2027-01-02","Ipswich Town","Premier League",true],
+  ["2027-01-05","Brentford","Premier League",true],
+  ["2027-01-23","Newcastle United","Premier League",false],
+  ["2027-01-27","Sabah","Champions League",true],
+  ["2027-02-06","Liverpool","Premier League",false],
+  ["2027-02-20","Fulham","Premier League",false],
+  ["2027-03-03","Crystal Palace","Premier League",false],
+  ["2027-03-20","Sunderland","Premier League",false],
+  ["2027-04-17","Aston Villa","Premier League",false],
+  ["2027-05-01","Tottenham Hotspur","Premier League",false],
+  ["2027-05-15","Nottingham Forest","Premier League",false],
+  ["2027-05-30","Brighton & Hove Albion","Premier League",false]
+];
+const fmt = new Intl.DateTimeFormat("nb-NO",{weekday:"short",day:"numeric",month:"short",year:"numeric",timeZone:"UTC"});
+const ol = document.getElementById("fixtures");
+for (const [d,opp,comp,fast,url] of KAMPER){
+  const li = document.createElement("li");
+  li.className = "fx" + (url ? " live" : "");
+  const date = document.createElement("span"); date.className="date"; date.textContent = fmt.format(new Date(d+"T12:00:00Z"));
+  const o = document.createElement("span"); o.className="opp"; o.textContent = opp;
+  const m = document.createElement("span"); m.className="meta"; m.textContent = comp + (fast ? "" : " · dato ikke endelig");
+  o.appendChild(m);
+  const s = document.createElement("span"); s.className="state";
+  if (url){ const a=document.createElement("a"); a.href=url; a.textContent="Se reisen"; s.appendChild(a); } else { s.textContent="Kommer"; }
+  li.append(date,o,s); ol.appendChild(li);
+}
+</script>
+
+</body></html>

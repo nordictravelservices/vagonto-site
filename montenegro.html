@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Vagonto Montenegro</title>
+<meta name="description" content="Montenegro med Vagonto: fly + hotell til Budva, Kotor, Tivat, Herceg Novi og Petrovac. Direktefly fra Oslo i sesongen, ca. 3 timer. Velg hotellet først – legg til fly og transfer etterpå.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+/* montenegro-siden */
+.crumb{font-size:13px;color:var(--ink-faint);margin:6px 0 0}
+.crumb a{color:var(--hot);font-weight:600}
+.mhero{min-height:460px;background:#0f2f3a}
+.mhero .hero-in{grid-template-columns:1.2fr .8fr;min-height:460px}
+.mhero h1{max-width:none;font-size:clamp(30px,4.2vw,52px)}
+.wm{font-weight:800;letter-spacing:-.04em}
+.wm b{color:#6EC1EA;font-weight:800}
+.facts{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:18px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.fact small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+.fact b{display:block;font-size:16px;margin-top:4px;line-height:1.3}
+@media (max-width:1000px){.facts{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.facts{grid-template-columns:repeat(2,1fr)}}
+.ph.fb{background:linear-gradient(135deg,#17698F 0%,#1DB5A5 60%,#9EDCF5 100%)}
+.ph.fb.m2{background:linear-gradient(135deg,#143528,#17698F)}
+.ph.fb.m3{background:linear-gradient(135deg,#9B6BD6,#17698F)}
+.ph.fb.m4{background:linear-gradient(135deg,#E8A400,#F26B4E)}
+.ph.fb .lbl{position:absolute;inset:auto 14px 14px auto;color:#fff;font-weight:800;font-size:22px;letter-spacing:-.03em;text-shadow:0 2px 10px rgba(0,0,0,.35)}
+.ways{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.way{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px 20px;display:flex;flex-direction:column;gap:8px}
+.way .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:#fff}
+.way .ic svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.way h3{font-size:19px;font-weight:800}
+.way p{margin:0;font-size:14.5px;color:var(--ink-soft);flex:1}
+.way a{font-weight:600;color:var(--hot);font-size:14px}
+@media (max-width:1000px){.ways{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.ways{grid-template-columns:1fr}}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:0 18px}
+.faq summary{cursor:pointer;font-weight:700;font-size:15.5px;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::after{content:"+";color:var(--hot);font-weight:800}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin:0 0 16px;font-size:14.5px;color:var(--ink-soft)}
+@media (max-width:820px){.faq{grid-template-columns:1fr}}
+.band{display:grid;grid-template-columns:1.3fr 1fr;gap:26px;align-items:center;background:var(--ink);color:#F1F3EE;border-radius:24px;padding:36px 36px 34px}
+.band h2{font-size:clamp(24px,3vw,34px);font-weight:800;color:#fff}
+.band p{color:rgba(241,243,238,.85);max-width:50ch;margin:12px 0 18px}
+.band .cta{display:flex;gap:12px;flex-wrap:wrap}
+.band ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.band li{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px 14px;font-size:14.5px}
+.band li b{display:block;color:#fff}
+@media (max-width:820px){.band{grid-template-columns:1fr;padding:26px 20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="lock" href="index.html"><img src="img/vagonto-logo.png" alt="Vagonto" style="height:34px;width:auto"></a>
+  <nav class="menu"><a href="index.html#reiser">Ferdige reiser</a><a href="https://airticketcollective.paquetedinamico.com/no/tripplanner" target="_blank" rel="noopener">Pakk reisen selv</a><a href="index.html#skapere">Reiseskaperne</a><a href="#">Om oss</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-hot" href="https://airticketcollective.paquetedinamico.com/no/destination/TIV-1?tripType=FLIGHT_HOTEL" target="_blank" rel="noopener">Søk Montenegro</a>
+</header>
+<div class="crumb"><a href="index.html">Forsiden</a> · Montenegro</div>
+
+<section class="hero mhero" style="margin-top:10px">
+  <img class="bg" src="img/montenegro-02.jpg" alt="">
+  <div class="veil"></div>
+  <div class="hero-in">
+    <div>
+      <div class="kick"><span class="wm">Vag<b>onto</b> Montenegro</span></div>
+      <h1>Bukta, fjellene og 290 km kyst.<br><em>Tre timer fra Oslo.</em></h1>
+      <p>Kotorbukta ser ut som en fjord, Budva har gamleby og sand, og en time innover ligger fjell på 2 500 meter. Alt dette får du uten å bytte hotell – eller med, hvis du vil. Du velger.</p>
+      <div class="cta">
+        <a class="btn btn-korall" href="https://airticketcollective.paquetedinamico.com/no/destination/TIV-1?tripType=FLIGHT_HOTEL" target="_blank" rel="noopener">Søk fly + hotell</a>
+        <a class="btn btn-white" href="#steder">Se stedene</a>
+      </div>
+    </div>
+    <div class="float">
+      <span class="chip c1"><i style="background:var(--hot)"></i>Direktefly fra Oslo i sesongen</span>
+      <a class="tcard" href="https://airticketcollective.paquetedinamico.com/no/destination/TIV-11?tripType=FLIGHT_HOTEL" target="_blank" rel="noopener">
+        <div class="ph fb m2" style="position:relative;aspect-ratio:4/3"><img src="img/montenegro-03.jpg" alt="Kotor" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="lbl">Kotor</span></div>
+        <div class="b">
+          <h3>Kotor – gamlebyen innerst i bukta</h3>
+          <div class="m">Fly + hotell · UNESCO-by · 1 500 trinn opp til festningen</div>
+          <div class="f"><span class="pris">Se priser<small>fly + hotell</small></span><span class="btn btn-ink" style="padding:9px 14px;font-size:13px">Søk</span></div>
+        </div>
+      </a>
+      <span class="chip c2"><i style="background:var(--hot)"></i>Transfer fra Tivat, 10 min</span>
+    </div>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="fact"><small>Flytid</small><b>Ca. 3 timer fra Oslo</b></div>
+  <div class="fact"><small>Flyplasser</small><b>Tivat (TIV) og Podgorica (TGD)</b></div>
+  <div class="fact"><small>Direktefly</small><b>Oslo–Tivat i sommersesongen</b></div>
+  <div class="fact"><small>Sesong</small><b>Mai–oktober, badevarmt juni–september</b></div>
+  <div class="fact"><small>Valuta</small><b>Euro</b></div>
+  <div class="fact"><small>Tidssone</small><b>Samme som Norge</b></div>
+</div>
+
+<section id="steder">
+  <div class="sh">
+    <div><h2>Stedene</h2><p>Hvert sted har sin egen side med hoteller, fly og transfer. Velg hotellet først – fly og transfer legger du til etterpå.</p></div>
+    <a href="https://airticketcollective.paquetedinamico.com/no/tripplanner" target="_blank" rel="noopener">Flere steder i én reise →</a>
+  </div>
+  <div class="cards">
+    <a class="card" href="https://airticketcollective.paquetedinamico.com/no/destination/TIV-1?tripType=FLIGHT_HOTEL" target="_blank" rel="noopener">
+      <div class="ph fb"><img src="img/montenegro-04.jpg" alt="Budva"><span class="tag h">Mest populært</span><span class="lbl">Budva</span></div>
+      <div class="b"><h3>Budva</h3><div class="m">Gamleby på en odde, sandstrender på begge sider og Sveti Stefan rett ned veien. Byen som er våken etter midnatt.</div>
+      <div class="f"><span class="pris">Se priser<small>fly + hotell</small></span><span class="go">Søk →</span></div></div>
+    </a>
+    <a class="card" href="https://airticketcollective.paquetedinamico.com/no/destination/TIV-11?tripType=FLIGHT_HOTEL" target="_blank" rel="noopener">
+      <div class="ph fb m2"><img src="img/montenegro-05.jpg" alt="Kotor"><span class="tag">UNESCO</span><span class="lbl">Kotor</span></div>
+      <div class="b"><h3>Kotor</h3><div class="m">Innerst i bukta, med bymur som klatrer opp fjellsiden. Kaffe på torget om morgenen, før cruisebåtene kommer.</div>
+      <div class="f"><span class="pris">Se priser<small>fly + hotell</small></span><span class="go">Søk →</span></div></div>
+    </a>
+    <a class="card" href="https://airticketcollective.paquetedinamico.com/no/destination/TIV-10?tripType=FLIGHT_HOTEL" target="_blank" rel="noopener">
+      <div class="ph fb m3"><img src="img/montenegro-06.jpg" alt="Tivat"><span class="tag">Nærmest flyplassen</span><span class="lbl">Tivat</span></div>
+      <div class="b"><h3>Tivat</h3><div class="m">Porto Montenegro-marinaen, restauranter langs kaia og ti minutter fra flyet lander til du har nøkkelkortet i hånda.</div>
+      <div class="f"><span class="pris">Se priser<small>fly + hotell</small></span><span class="go">Søk →</span></div></div>
+    </a>
+    <a class="card" href="https://airticketcollective.paquetedinamico.com/no/destination/TIV-2?tripType=FLIGHT_HOTEL" target="_blank" rel="noopener">
+      <div class="ph fb m4"><img src="img/montenegro-07.jpg" alt="Herceg Novi"><span class="tag">Ved innløpet</span><span class="lbl">Herceg Novi</span></div>
+      <div class="b"><h3>Herceg Novi</h3><div class="m">Trapper, bougainvillea og strandpromenade i sju kilometer. Dubrovnik er under en time unna hvis du vil ta en dag der.</div>
+      <div class="f"><span class="pris">Se priser<small>fly + hotell</small></span><span class="go">Søk →</span></div></div>
+    </a>
+    <a class="card" href="https://airticketcollective.paquetedinamico.com/no/destination/TIV-5?tripType=FLIGHT_HOTEL" target="_blank" rel="noopener">
+      <div class="ph fb"><img src="img/montenegro-08.jpg" alt="Petrovac"><span class="tag">Rolig</span><span class="lbl">Petrovac</span></div>
+      <div class="b"><h3>Petrovac</h3><div class="m">Liten bukt, lang strand, et par kvartaler med restauranter. For dem som vil ha Budva-stranda uten Budva-nettene.</div>
+      <div class="f"><span class="pris">Se priser<small>fly + hotell</small></span><span class="go">Søk →</span></div></div>
+    </a>
+    <a class="card" href="https://airticketcollective.paquetedinamico.com/no/destination/PER-11?tripType=FLIGHT_HOTEL" target="_blank" rel="noopener">
+      <div class="ph fb m2"><img src="img/montenegro-09.jpg" alt="Perast"><span class="tag">Liten</span><span class="lbl">Perast</span></div>
+      <div class="b"><h3>Perast</h3><div class="m">Én gate, steinpalasser fra seilskutetida og øya med kirken rett utenfor. Småbåt dit på fem minutter.</div>
+      <div class="f"><span class="pris">Se priser<small>fly + hotell</small></span><span class="go">Søk →</span></div></div>
+    </a>
+    <a class="card" href="https://airticketcollective.paquetedinamico.com/no/destination/TIV-4?tripType=FLIGHT_HOTEL" target="_blank" rel="noopener">
+      <div class="ph fb m4"><img src="img/montenegro-10.jpg" alt="Ulcinj"><span class="tag">Lengst sør</span><span class="lbl">Ulcinj</span></div>
+      <div class="b"><h3>Ulcinj</h3><div class="m">Velika plaža: tolv kilometer sand, kite-vind om ettermiddagen og Albania på den andre siden av elva.</div>
+      <div class="f"><span class="pris">Se priser<small>fly + hotell</small></span><span class="go">Søk →</span></div></div>
+    </a>
+    <a class="card" href="https://airticketcollective.paquetedinamico.com/no/destination/ZAB-6?tripType=FLIGHT_HOTEL" target="_blank" rel="noopener">
+      <div class="ph fb m3"><span class="tag">Fjell</span><span class="lbl">Žabljak</span></div>
+      <div class="b"><h3>Žabljak og Durmitor</h3><div class="m">Fjellsjøer, rafting i Tara-canyonen og 1 450 meter over havet. Legg til to netter her etter kysten.</div>
+      <div class="f"><span class="pris">Se priser<small>fly + hotell</small></span><span class="go">Søk →</span></div></div>
+    </a>
+  </div>
+</section>
+
+<section>
+  <div class="sh"><div><h2>Fire måter å gjøre Montenegro på</h2><p>Alle bookes på samme sted. Fly, hotell, transfer og opplevelser – én bestilling.</p></div></div>
+  <div class="ways">
+    <div class="way"><span class="ic" style="background:var(--amber)"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></span><h3>Strand, en uke</h3><p>Budva eller Petrovac, hotell ved stranda, transfer fra Tivat. Enkelt og varmt.</p><a href="https://airticketcollective.paquetedinamico.com/no/destination/TIV-1?tripType=FLIGHT_HOTEL" target="_blank" rel="noopener">Søk Budva →</a></div>
+    <div class="way"><span class="ic" style="background:var(--turkis)"><svg viewBox="0 0 24 24"><path d="M3 18c3-6 6-8 9-8s6 2 9 8M8 18V8M16 18v-6"/></svg></span><h3>Bukta</h3><p>Bo i Kotor eller Perast, båt over til Perast og kirkeøya, kveld i gamlebyen. For den som liker vegger med historie.</p><a href="https://airticketcollective.paquetedinamico.com/no/destination/TIV-11?tripType=FLIGHT_HOTEL" target="_blank" rel="noopener">Søk Kotor →</a></div>
+    <div class="way"><span class="ic" style="background:var(--lilla)"><svg viewBox="0 0 24 24"><path d="M3 20l6-12 4 7 2-3 6 8z"/></svg></span><h3>Kyst + fjell</h3><p>Fire netter ved sjøen, tre i Žabljak. Leiebil mellom, eller transfer. Du setter sammen begge delene i én reise.</p><a href="https://airticketcollective.paquetedinamico.com/no/tripplanner" target="_blank" rel="noopener">Pakk reisen selv →</a></div>
+    <div class="way"><span class="ic" style="background:var(--korall)"><svg viewBox="0 0 24 24"><path d="M4 14l5-9 3 5 3-3 5 7z"/><path d="M2 20h20"/></svg></span><h3>Dubrovnik + Montenegro</h3><p>Fly til Dubrovnik, to netter der, så over grensa til Herceg Novi og Kotor. Hjem fra Tivat. Én reise, to land.</p><a href="https://airticketcollective.paquetedinamico.com/no/tripplanner" target="_blank" rel="noopener">Pakk reisen selv →</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="band">
+    <div>
+      <div class="kick" style="color:#9EDCF5">Slik gjør du det</div>
+      <h2>Velg hotellet først. Flyet finner vi.</h2>
+      <p>Søk på stedet du vil bo, se hotellene med oppdaterte priser, og legg til fly og transfer når du er klar. Lagre reisen, kom tilbake, bytt hotell. Book den når den stemmer.</p>
+      <div class="cta">
+        <a class="btn btn-korall" href="https://airticketcollective.paquetedinamico.com/no/destination/TIV-1?tripType=FLIGHT_HOTEL" target="_blank" rel="noopener">Søk fly + hotell</a>
+        <a class="btn btn-white" href="https://airticketcollective.paquetedinamico.com/no/destination/TIV-1?tripType=ONLY_HOTEL" target="_blank" rel="noopener">Bare hotell</a>
+      </div>
+    </div>
+    <ul>
+      <li><b>Fly + hotell i ett søk</b>Direktefly fra Oslo i sesongen, ellers via København eller Riga.</li>
+      <li><b>Transfer fra Tivat</b>Privatbil til hotellet – Kotor og Tivat på 10–20 min, Budva på 30.</li>
+      <li><b>Opplevelser</b>Båt i bukta, Lovćen, Skadarsjøen, rafting i Tara. Legg til når du vil.</li>
+      <li><b>Trygt booket</b>Reisegaranti og folk i Norge å ringe hvis noe skjer.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="sh"><div><h2>Spørsmål folk stiller om Montenegro</h2></div></div>
+  <div class="faq">
+    <details><summary>Hvor lang er flyturen fra Norge?</summary><p>Ca. 3 timer fra Oslo til Tivat med direktefly. Med mellomlanding (København, Riga, Beograd) blir det 5–7 timer.</p></details>
+    <details><summary>Hvilken flyplass skal jeg velge?</summary><p>Tivat (TIV) for kysten – Kotor, Tivat, Budva og Herceg Novi ligger 10–40 minutter unna. Podgorica (TGD) har flere avganger hele året og passer for Ulcinj, Skadarsjøen og fjellene. Dubrovnik (DBV) er et tredje alternativ for Herceg Novi og Kotor.</p></details>
+    <details><summary>Når er det best å reise?</summary><p>Juni og september: varmt i sjøen, færre folk enn i juli–august. Mai og oktober passer for bukta og fjellene. Juli og august er høysesong med full Budva.</p></details>
+    <details><summary>Budva eller Kotor?</summary><p>Budva for strand, liv og sand. Kotor for gamleby, bukta og rolige kvelder. De ligger 25 minutter fra hverandre, så du kan bo ett sted og ta dagsturer til det andre.</p></details>
+    <details><summary>Kan jeg velge hotell først og fly etterpå?</summary><p>Ja. Søk på stedet, velg hotell, og legg til fly og transfer når du er klar. Reisen kan lagres og endres til du booker den.</p></details>
+    <details><summary>Trenger jeg leiebil?</summary><p>Ikke langs kysten – transfer og lokalbuss holder. Skal du til Durmitor eller rundt Skadarsjøen, er bil enklest. Leiebil kan legges til i reisen.</p></details>
+    <details><summary>Hvilken valuta brukes?</summary><p>Euro. Montenegro er ikke EU-medlem, men bruker euro. Kort går nesten overalt, men ha litt kontanter til småsteder.</p></details>
+    <details><summary>Er Montenegro dyrt?</summary><p>Rimeligere enn Kroatia og Italia på restaurant og hotell, særlig utenom juli–august. Porto Montenegro i Tivat er unntaket.</p></details>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="tr"><span class="ic" style="background:var(--surface-2);color:var(--hot)"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><div><b>Reisegaranti</b><span>Reisegaranti på alle pakkereiser.</span></div></div>
+  <div class="tr"><span class="ic" style="background:var(--surface-2);color:var(--hot)"><svg viewBox="0 0 24 24"><path d="M10 19l2-5 8-3-1-2-8 2-4-5-2 1 2 5-3 1-2-2-1 1 3 4z"/></svg></span><div><b>Egne flybilletter</b><span>Vi utsteder billettene selv, uten mellomledd.</span></div></div>
+  <div class="tr"><span class="ic" style="background:var(--surface-2);color:var(--hot)"><svg viewBox="0 0 24 24"><path d="M6 3h4l2 5-2.5 1.5a12 12 0 005 5L16 12l5 2v4a2 2 0 01-2 2A16 16 0 014 5a2 2 0 012-2z"/></svg></span><div><b>Folk i Norge</b><span>På norsk, før, under og etter reisen.</span></div></div>
+  <div class="tr"><span class="ic" style="background:var(--surface-2);color:var(--hot)"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2"/></svg></span><div><b>Én bestilling</b><span>Fly, hotell, transfer og opplevelser i ett kjøp.</span></div></div>
+  <div class="tr"><span class="ic" style="background:var(--surface-2);color:var(--hot)"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9zM2 10h2M2 14h2M20 10h2M20 14h2M10 2v2M14 2v2M10 20v2M14 20v2"/></svg></span><div><b>Skandinavias mest avanserte reisesystem</b><span>Alt prises i sanntid, booket som én reise.</span></div></div>
+</div>
+
+<footer>
+  <div>Vagonto Travel AS · Kongsvinger · Reisegaranti gjennom Airticket Group</div>
+  <div>Utkast, 21. okt 2026 · alle lenker går til bookingsystemet</div>
+</footer>
+</div>
+</body></html>
