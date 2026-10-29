@@ -1,0 +1,34 @@
+# Deploys the static site to the web server on every push to main.
+# Needs four repository secrets (Settings → Secrets and variables → Actions):
+#   DEPLOY_HOST  – server hostname or IP
+#   DEPLOY_USER  – SSH user
+#   DEPLOY_KEY   – private SSH key (the matching public key goes in the
+#                  user's ~/.ssh/authorized_keys on the server)
+#   DEPLOY_PATH  – absolute path to the document root for vagonto.com,
+#                  e.g. /var/www/vagonto.com/html
+name: Deploy vagonto.com
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Upload site
+        run: |
+          rsync -az --delete \
+            --exclude '.git' --exclude '.github' --exclude 'README.md' \
+            -e "ssh -i ~/.ssh/id_deploy" \
+            ./ "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}/"
