@@ -1,6 +1,6 @@
 # vagonto-site
 
-Kildekoden til **vagonto.com** – forside og landingssider for Vagonto Travel AS.
+Kildekoden til **vagonto.com** – forside og landingssider for Vagonto AS.
 
 Booking skjer ikke her. Alle salgsknapper lenker videre til bookingmotoren
 (Travel Compositor) på **booking.vagonto.com** (live med SSL fra 30. okt 2026,
