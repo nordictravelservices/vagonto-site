@@ -1,5 +1,5 @@
 <!doctype html><html lang="no"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style>
-<title>Om Vagonto – folkene og navnet bak reisene</title>
+<title>Om Vagonto – navnet og tryggheten bak reisene</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@700&family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap">
@@ -136,8 +136,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:30px 0 56px;colo
     <nav class="main">
       <a id="forsideLink" href="#">Reiseforslag</a>
       <a href="#navnet">Navnet</a>
-      <a href="#folkene">Folkene</a>
-      <a href="#trygghet">Trygghet</a>
+            <a href="#trygghet">Trygghet</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
     <div class="spacer"></div>
@@ -176,10 +175,6 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:30px 0 56px;colo
   </div>
 </section>
 
-<section class="section wrap" id="folkene">
-  <div class="shode"><h2>Folkene</h2><span>Teamet bak Vagonto</span></div>
-  <div class="grid" id="teamGrid" style="grid-template-columns:repeat(auto-fill,minmax(230px,1fr))"></div>
-</section>
 
 <section class="section wrap" id="trygghet" style="padding-top:10px">
   <div class="shode"><h2>Trygt å kjøpe hos oss</h2><span>Det som gjelder for hver eneste bestilling</span></div>
@@ -212,14 +207,6 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:30px 0 56px;colo
 const FORSIDE="reiseforslag.html";
 const SKAPER="pakk-reisen-selv.html";
 
-/* === teamet — fyll inn riktige roller og tekster === */
-const TEAM=[
- {navn:"Görgen", kjonn:"m", seed:3},
- {navn:"Farooq", kjonn:"m", seed:11},
- {navn:"Alvi", kjonn:"m", seed:27},
- {navn:"Talia", kjonn:"k", seed:35},
- {navn:"Hasan", kjonn:"m", seed:43}
-];
 
 const TRYGGHET=[
  {t:"Reisegaranti", d:"Alle reiser er dekket av reisegaranti. Pengene dine er sikret hvis noe skulle skje med oss.", i:"skjold"},
@@ -269,11 +256,6 @@ const IKON={
  koffert:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2"/>'
 };
 
-document.getElementById("teamGrid").innerHTML=TEAM.map(p=>`
-  <div class="card" style="padding:20px;align-items:center;text-align:center">
-    <div style="width:96px;height:96px;border-radius:50%;overflow:hidden;margin-bottom:14px;box-shadow:0 0 0 3px var(--surface),0 0 0 4px var(--line)">${portrett(p.seed,p.kjonn)}</div>
-    <h3 style="font-size:18px">${p.navn}</h3>
-  </div>`).join("");
 
 document.getElementById("tgrid").innerHTML=TRYGGHET.map(t=>`
   <div class="tkort">

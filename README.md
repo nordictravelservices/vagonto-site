@@ -17,7 +17,7 @@ satt som standarddomene på Airticket Collective-micrositen).
 | `pakk-reisen-selv.html` | Slik pakker du reisen selv |
 | `bli-reiseskaper.html` | Rekruttering av reiseskapere |
 | `maria-solheim.html` | Eksempel på profilside for en reiseskaper |
-| `om-oss.html` | Om Vagonto, navnet, folkene, kontakt |
+| `om-oss.html` | Om Vagonto, navnet, trygghet, kontakt |
 | `reisehjelp.html` | KI-chat (virker ikke uten KI-tjeneste bak) – ikke i menyen |
 | `arsenal.html` | Arsenal hjemmekamper (demo) – ikke i menyen |
 | `sider.html` | Arbeidsoversikt over alle sidene – ikke i menyen |
