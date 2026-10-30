@@ -12,8 +12,9 @@ satt som standarddomene på Airticket Collective-micrositen).
 |---|---|
 | `index.html` | Forsiden fra oktober («Din reise, satt sammen av deg») |
 | `reiseforslag.html` | Første forside fra september (reiseskapere og reisekort) |
-| `smabyer.html` | Småbyer |
-| `montenegro.html` | Destinasjonsside Montenegro |
+| `akkurat-na.html` | «Akkurat nå» – samleside i menyen for sesongens steder og kampanjer |
+| `smabyer.html` | Småbyer (under Akkurat nå, ikke i menyen) |
+| `montenegro.html` | Montenegro (kampanjeside under Akkurat nå, ikke i menyen) |
 | `pakk-reisen-selv.html` | Slik pakker du reisen selv |
 | `bli-reiseskaper.html` | Rekruttering av reiseskapere |
 | `maria-solheim.html` | Eksempel på profilside for en reiseskaper |
