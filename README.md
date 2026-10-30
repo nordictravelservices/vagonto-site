@@ -26,6 +26,7 @@ satt som standarddomene på Airticket Collective-micrositen).
 | `chrome.css` | Felles meny og bunnlinje for alle sider (klasser med `vg-`) |
 | `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` | Rutemerket, samme som på booking.vagonto.com |
 | `img/` | Bilder. `vagonto-logo.png` er logoen |
+| `img/bildebank/` | Egne bilder vi har lov til å bruke (fotograf og bruk står i `img/bildebank/README.md`) |
 
 Rene statiske filer – ingen byggesteg, ingen rammeverk. De eldre sidene har
 sin egen CSS inline; den gamle toppen og bunnen deres er skjult (beholdt
