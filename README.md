@@ -37,4 +37,7 @@ avklares med TC-support.
 
 ## Deploy
 
-Ikke avgjort (GoDaddy-serveren eller Bunny). Filene kan lastes opp som de er.
+Netlify, koblet direkte til dette repoet. Hver push til `main` publiseres
+automatisk. Ingen server, ingen byggesteg (publish directory = repo-roten).
+DNS ligger i Domeneshop: `@` → A `75.2.60.5`, `www` → CNAME til
+Netlify-sitens `*.netlify.app`-adresse. SSL lages automatisk av Netlify.
