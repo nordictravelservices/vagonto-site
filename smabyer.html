@@ -1,0 +1,394 @@
+<!doctype html><html lang="no"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Småbyer – byer du ikke har vært i | Vagonto</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --ground:#F4F6F1;--surface:#FFFFFF;--surface-2:#E7ECE5;--ink:#143528;--ink-soft:#4C6558;--ink-faint:#7C9186;
+  --line:#DDE4DB;--hot:#17698F;--brand:#2E9BD6;
+  --turkis:#1DB5A5;--korall:#F26B4E;--amber:#E8A400;--lilla:#9B6BD6;
+  --turkis-soft:#DDF5F1;--korall-soft:#FDE6DF;--amber-soft:#FBF1D2;--lilla-soft:#EEE6F8;--brand-soft:#DFEFF9;
+  --shadow:0 2px 6px rgba(20,53,40,.06),0 18px 40px rgba(20,53,40,.12);
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){color-scheme:dark;
+    --ground:#0E1712;--surface:#16241D;--surface-2:#22322A;--ink:#E7EEE8;--ink-soft:#A3B6AA;--ink-faint:#7A8D82;--line:#2C3A33;--hot:#6EC1EA;--brand:#6EC1EA;
+    --turkis-soft:#123A36;--korall-soft:#3D2420;--amber-soft:#3A3010;--lilla-soft:#2A2340;--brand-soft:#10303F;--shadow:0 2px 6px rgba(0,0,0,.4),0 18px 40px rgba(0,0,0,.45);}
+}
+:root[data-theme="dark"]{color-scheme:dark;
+  --ground:#0E1712;--surface:#16241D;--surface-2:#22322A;--ink:#E7EEE8;--ink-soft:#A3B6AA;--ink-faint:#7A8D82;--line:#2C3A33;--hot:#6EC1EA;--brand:#6EC1EA;
+  --turkis-soft:#123A36;--korall-soft:#3D2420;--amber-soft:#3A3010;--lilla-soft:#2A2340;--brand-soft:#10303F;--shadow:0 2px 6px rgba(0,0,0,.4),0 18px 40px rgba(0,0,0,.45);}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Poppins","Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 56px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin-inline:auto}
+h1,h2,h3{margin:0;line-height:1.08;letter-spacing:-.025em;text-wrap:balance}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;font-size:15px;white-space:nowrap;transition:transform .12s ease,box-shadow .12s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-hot{background:var(--hot);color:#fff}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-white{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.btn-korall{background:var(--hot);color:#fff}
+.kick{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--hot);font-weight:600}
+:focus-visible{outline:2px solid var(--hot);outline-offset:3px}
+
+/* header */
+.top{display:flex;align-items:center;gap:18px;padding:18px 0 10px}
+.lock{display:flex;align-items:center;gap:9px;font-weight:800;font-size:24px;letter-spacing:-.04em}
+.lock img{height:34px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lock img{filter:brightness(0) invert(1)}}
+:root[data-theme="dark"] .lock img{filter:brightness(0) invert(1)}
+.lock span{color:var(--brand)}
+.menu{display:flex;gap:18px;font-size:14.5px;color:var(--ink-soft);margin-left:14px}
+.menu a:hover{color:var(--ink)}
+.spacer{flex:1}
+@media (max-width:900px){.menu{display:none}}
+
+/* hero */
+.hero{position:relative;margin-top:10px;border-radius:24px;overflow:hidden;min-height:520px;background:#0b3a4a}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 55%}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(8,26,34,.82) 0%,rgba(8,26,34,.5) 45%,rgba(8,26,34,.08) 78%)}
+.hero-in{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:56px 52px;min-height:520px}
+.hero .kick{color:#9EDCF5}
+.hero h1{color:#fff;font-size:clamp(34px,5vw,62px);font-weight:800;margin-top:12px;max-width:14ch}
+.hero h1 em{font-style:normal;color:#BFE3F5}
+.hero p{color:rgba(255,255,255,.9);font-size:17.5px;max-width:46ch;margin:16px 0 0}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.float{position:relative;justify-self:end;width:min(340px,100%)}
+.tcard{display:block;background:var(--surface);color:var(--ink);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);transform:rotate(2.5deg)}
+.tcard img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.tcard .b{padding:14px 16px 16px}
+.tcard h3{font-size:17px;font-weight:700}
+.tcard .m{font-size:13px;color:var(--ink-soft);margin-top:4px}
+.tcard .f{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.tcard .pris{font-weight:800;font-size:18px;letter-spacing:-.02em}
+.tcard .pris small{font-weight:500;font-size:12px;color:var(--ink-faint);display:block}
+.chip{position:absolute;background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;box-shadow:var(--shadow);display:flex;align-items:center;gap:8px}
+.chip i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.chip.c1{left:-34px;top:22px;transform:rotate(-4deg)}
+.chip.c2{right:-18px;bottom:64px;transform:rotate(3deg)}
+@media (max-width:900px){
+  .hero-in{grid-template-columns:1fr;padding:36px 22px 30px;min-height:0}
+  .float{justify-self:start;width:min(300px,100%);margin-top:8px}
+  .chip.c1{left:auto;right:-6px;top:-14px}.chip.c2{right:auto;left:-8px;bottom:-10px}
+}
+
+/* tiles */
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:22px}
+.tile{display:flex;flex-direction:column;gap:10px;padding:18px 18px 16px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);transition:transform .14s ease,box-shadow .14s ease}
+.tile:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.tile .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center}
+.tile .ic svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.tile b{font-size:15.5px}
+.tile span{font-size:13px;color:var(--ink-soft);line-height:1.4}
+.tile .ic{background:var(--surface-2);color:var(--hot)}
+@media (max-width:900px){.tiles{grid-template-columns:repeat(2,1fr)}.tile:last-child{grid-column:1/-1}}
+
+/* sections */
+section{margin-top:52px}
+.sh{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:18px}
+.sh h2{font-size:clamp(24px,3.2vw,34px);font-weight:800}
+.sh p{margin:6px 0 0;color:var(--ink-soft);max-width:60ch}
+.sh a{font-weight:600;color:var(--hot);white-space:nowrap}
+
+/* trip cards */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{position:relative;display:flex;flex-direction:column;background:var(--surface);border-radius:var(--r);overflow:hidden;border:1px solid var(--line);transition:transform .16s ease,box-shadow .16s ease}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card .ph{position:relative;aspect-ratio:4/3;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.card:hover .ph img{transform:scale(1.04)}
+.tag{position:absolute;left:12px;top:12px;padding:5px 11px;border-radius:999px;font-size:12px;font-weight:700;color:#fff}
+.tag{background:rgba(20,53,40,.72);backdrop-filter:blur(4px)}.tag.h{background:var(--hot)}
+.card .b{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:17.5px;font-weight:700}
+.card .m{font-size:13.5px;color:var(--ink-soft)}
+.card .f{margin-top:auto;padding-top:12px;display:flex;justify-content:space-between;align-items:flex-end}
+.card .pris{font-weight:800;font-size:18px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.card .pris small{display:block;font-weight:500;font-size:12px;color:var(--ink-faint)}
+.card .go{font-size:14px;font-weight:600;color:var(--hot)}
+.card.wide{grid-column:span 2}
+.card.wide .ph{aspect-ratio:auto;height:100%}
+.card.wide{display:grid;grid-template-columns:1.1fr 1fr}
+@media (max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}.card.wide{grid-column:span 2}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}.card.wide{grid-column:auto;grid-template-columns:1fr}.card.wide .ph{aspect-ratio:4/3;height:auto}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{border-radius:var(--r);padding:24px 22px 22px;display:flex;flex-direction:column;gap:8px;min-height:190px}
+.step .n{font-weight:800;font-size:13px;letter-spacing:.14em}
+.step h3{font-size:22px;font-weight:800}
+.step p{margin:0;font-size:14.5px;line-height:1.5}
+.step{background:var(--surface);border:1px solid var(--line)}.step .n{color:var(--hot)}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
+
+/* creators */
+.crew{display:grid;grid-template-columns:1fr 1.4fr;gap:26px;align-items:center;background:var(--ink);color:#F1F3EE;border-radius:24px;padding:36px 36px 34px}
+.crew h2{font-size:clamp(24px,3vw,34px);font-weight:800;color:#fff}
+.crew p{color:rgba(241,243,238,.85);max-width:46ch;margin:12px 0 18px}
+.faces{display:flex;flex-wrap:wrap;gap:14px;justify-content:flex-end}
+.face{width:112px;height:112px;border-radius:50%;overflow:hidden;border:4px solid rgba(255,255,255,.9);box-shadow:0 10px 26px rgba(0,0,0,.28)}
+.face img{width:100%;height:100%;object-fit:cover}
+.face:nth-child(2){transform:translateY(22px)}.face:nth-child(4){transform:translateY(-14px)}
+.crew small{display:block;font-size:12.5px;color:rgba(241,243,238,.6);margin-top:10px}
+@media (max-width:820px){.crew{grid-template-columns:1fr;padding:26px 20px}.faces{justify-content:flex-start}.face{width:84px;height:84px}}
+
+/* trust */
+.trust{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:52px}
+.tr{display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line)}
+.tr .ic{flex:none;width:36px;height:36px;border-radius:10px;display:grid;place-items:center}
+.tr .ic svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tr b{display:block;font-size:14.5px}
+.tr span{font-size:12.8px;color:var(--ink-soft);line-height:1.4}
+@media (max-width:1000px){.trust{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.trust{grid-template-columns:1fr}}
+
+footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--ink-faint)}
+
+/* stemninger */
+.stemninger{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}
+.stem{display:flex;flex-direction:column;gap:8px;padding:18px;border-radius:var(--r);
+  background:var(--surface);border:1px solid var(--line);transition:transform .14s ease,box-shadow .14s ease}
+.stem:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.stem .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center}
+.stem .ic svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;
+  stroke-linecap:round;stroke-linejoin:round}
+.ic-turkis{background:var(--turkis-soft);color:var(--turkis)}
+.ic-korall{background:var(--korall-soft);color:var(--korall)}
+.ic-amber{background:var(--amber-soft);color:var(--amber)}
+.ic-lilla{background:var(--lilla-soft);color:var(--lilla)}
+.ic-brand{background:var(--brand-soft);color:var(--hot)}
+.stem b{font-size:15.5px}
+.stem .naar{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+.stem .steder{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.stem .steder a{font-size:13px;color:var(--hot);border:1px solid var(--line);
+  border-radius:999px;padding:4px 10px;font-weight:500}
+.stem .steder a:hover{border-color:var(--hot)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* småbyer-undersider */
+.page{display:none}.page:target,.page.on{display:block}
+.crumb{font-size:13.5px;color:var(--ink-soft);margin:14px 0 0}.crumb a{color:var(--hot);font-weight:600}
+.intro{padding:34px 0 10px;max-width:62ch}.intro h1{font-size:clamp(30px,4.5vw,50px);font-weight:800}.intro p{color:var(--ink-soft);font-size:17px;margin:12px 0 0}
+.cards.byer{grid-template-columns:repeat(4,1fr)}@media (max-width:1000px){.cards.byer{grid-template-columns:repeat(2,1fr)}}@media (max-width:560px){.cards.byer{grid-template-columns:1fr}}
+.chero{position:relative;margin-top:14px;border-radius:24px;overflow:hidden;min-height:440px;background:#0b3a4a;display:flex;align-items:flex-end}
+.chero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.chero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,26,34,.05) 20%,rgba(8,26,34,.78) 100%)}
+.chero .in{position:relative;padding:40px 44px 38px;max-width:820px}
+.chero .kick{color:#9EDCF5}.chero h1{color:#fff;font-size:clamp(30px,4.6vw,54px);font-weight:800;margin-top:10px}
+.chero p{color:rgba(255,255,255,.92);font-size:17.5px;max-width:52ch;margin:14px 0 0}
+.chero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+@media (max-width:700px){.chero .in{padding:26px 20px 24px}.chero{min-height:360px}}
+.content{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:36px;margin-top:36px}
+@media (max-width:820px){.content{grid-template-columns:1fr;gap:22px}}
+.ingress{font-size:20px;font-weight:600;margin:0 0 16px;line-height:1.4;letter-spacing:-.01em}
+.body p{margin:0 0 16px;max-width:65ch;font-size:16.5px}
+.side{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;align-self:start}
+.side .kick{margin-bottom:10px}.side ul{margin:0 0 18px;padding-left:18px}.side li{margin-bottom:6px}
+.side .btn{width:100%;justify-content:center}
+.bottom{margin-top:36px;background:var(--ink);color:#F1F3EE;border-radius:24px;padding:30px 34px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+.bottom p{margin:0;max-width:58ch;font-size:17px;font-weight:500}
+.nextprev{display:flex;justify-content:space-between;gap:12px;margin-top:22px;font-size:14.5px;font-weight:600}.nextprev a{color:var(--hot)}
+</style>
+<meta name="description" content="Småbyer med fly og hotell i én bestilling.">
+<meta name="robots" content="noindex, nofollow"><!-- FJERNES VED LANSERING -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="chrome.css">
+</head>
+<body>
+<header class="vg-top"><div class="vg-in"><a class="vg-logo" href="index.html"><img src="img/vagonto-logo.png" alt="Vagonto"></a><nav class="vg-nav" aria-label="Hovedmeny"><a href="index.html">Forside</a><a href="reiseforslag.html">Reiseforslag</a><a href="smabyer.html" aria-current="page">Småbyer</a><a href="montenegro.html">Montenegro</a><a href="pakk-reisen-selv.html">Pakk reisen selv</a><a href="bli-reiseskaper.html">Bli reiseskaper</a><a href="om-oss.html">Om oss</a></nav><a class="vg-cta" href="https://booking.vagonto.com/no/">Book en reise</a></div></header>
+<div class="wrap">
+<header data-old hidden style="display:none" class="top">
+  <a class="lock" href="index.html"><img src="img/vagonto-logo.png" alt="Vagonto" style="height:34px;width:auto"></a>
+  <nav class="menu"><a href="index.html#reiser">Ferdige reiser</a><a href="index.html#stemninger">Stemninger</a><a href="#oversikt">Småbyer</a><a data-tc="no/tripplanner" href="#">Pakk reisen selv</a><a href="index.html#skapere">Reiseskaperne</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-hot" data-tc="no/tripplanner" href="#">Pakk reisen selv!</a>
+</header>
+<div id="app"></div>
+<footer data-old hidden style="display:none">
+  <div>Vagonto AS · Oslo · Norway</div>
+  <div>Småbyer · alle lenker går til bookingsystemet</div>
+</footer>
+</div>
+<script>
+var TC_BASE = "https://booking.vagonto.com"; // bytt til https://booking.vagonto.com
+var FORSIDE = "index.html";
+const CODES={"brighton": "BSH", "cambridge": "CBG", "haarlem": "HAARLEM-6", "delft": "HAG-5", "gent": "GNE", "lund": "LUD-22", "potsdam": "BER-3", "heidelberg": "HEI-1", "annecy": "NCY", "sitges": "STS", "sintra": "COS-10", "krakow": "KRK"};
+const IMG={"brighton": {"hero": "img/smabyer-01.jpg", "card": "img/smabyer-02.jpg"}, "cambridge": {"hero": "img/smabyer-03.jpg", "card": "img/smabyer-04.jpg"}, "haarlem": {"hero": "img/smabyer-05.jpg", "card": "img/smabyer-06.jpg"}, "delft": {"hero": "img/smabyer-07.jpg", "card": "img/smabyer-08.jpg"}, "gent": {"hero": "img/smabyer-09.jpg", "card": "img/smabyer-10.jpg"}, "lund": {"hero": "img/smabyer-11.jpg", "card": "img/smabyer-12.jpg"}, "potsdam": {"hero": "img/smabyer-13.jpg", "card": "img/smabyer-14.jpg"}, "heidelberg": {"hero": "img/smabyer-15.jpg", "card": "img/smabyer-16.jpg"}, "annecy": {"hero": "img/smabyer-17.jpg", "card": "img/smabyer-18.jpg"}, "sitges": {"hero": "img/smabyer-19.jpg", "card": "img/smabyer-20.jpg"}, "sintra": {"hero": "img/smabyer-21.jpg", "card": "img/smabyer-22.jpg"}, "krakow": {"hero": "img/smabyer-23.jpg", "card": "img/smabyer-24.jpg"}};
+const data = [
+{ id:"brighton", top:'Londons strandby med sjøluft, smug og liv i gatene. En langhelg som kjennes lenger enn den er.', bottom:'Brighton ligger en halvtime fra Gatwick. Vi setter sammen fly, hotell midt i The Lanes eller ved sjøen, og du legger til det du vil ha. Reisen er din, hele veien.', name:"Brighton", meta:"England · 30 min fra London Gatwick",
+  title:"Brighton – Londons frie og fargerike lillesøster ved havet",
+  ingress:"Sjøluft, krokete smug og en by som aldri tar seg selv høytidelig. Brighton er stedet du drar for å le, spise godt og gå langs stranden uansett årstid.",
+  body:`Det første du merker er lyden av måker og karusellmusikk fra pieren. Så ser du The Lanes, et virvar av smale smug med små butikker, kafeer og puber som har stått der siden 1700-tallet. Brighton er Englands mest avslappede by, og den er like levende en grå februardag som en lys sommerkveld.
+
+Start dagen med frokost i North Laine, byens kreative kvarter, før du rusler ned til sjøen. Om sommeren ligger folk på rullesteinsstranden med en iskald cider i hånden. Om vinteren går du samme strekning med krage opp og varm sjokolade, og byen føles bare enda mer som din egen.
+
+Kveldene er Brightons styrke. Levende musikk i kjellerlokaler, restauranter som matcher London på kvalitet men ikke på pris, og en pub på hvert hjørne der ingen spør hvor du kommer fra. Royal Pavilion lyser opp som et eventyrslott når mørket faller.
+
+Brighton er perfekt for en langhelg, både for par som vil ha noe annet enn storby og for venner som vil ha liv. Du er en halvtime fra Gatwick og likevel i en helt annen verden.`,
+  bullets:["Pieren, stranden og sjøluft hele året","The Lanes og North Laine med små butikker og kafeer","Et av Englands beste puber- og restaurantmiljøer","Levende musikk og teater hver kveld","Royal Pavilion som lyser opp om kvelden"] },
+
+{ id:"cambridge", top:'Elvebåter, college-hager og puber med åpen peis. Cambridge er England i sitt roligste og vakreste tempo.', bottom:'Stansted ligger en halvtime unna. Velg hotell i gamlebyen eller ved elva, legg til en punt-tur, og kom hjem med en by du vil tilbake til.', name:"Cambridge", meta:"England · 30 min fra London Stansted",
+  title:"Cambridge – elvebåter, college-hager og pubkvelder",
+  ingress:"Glid stille nedover elva Cam forbi 800 år gamle college-bygg, og avslutt med en pint i puben der studentene har sittet siden 1600-tallet. Cambridge er England på sitt vakreste.",
+  body:`Cambridge er en by som får deg til å senke tempoet. De gamle college-gårdsrommene åpner seg bak porter du nesten ikke legger merke til, og plutselig står du i en hage som ser ut som et maleri. Elva Cam renner rett gjennom det hele, og den beste måten å se byen på er fra en punt, de flate trebåtene du enten staker selv eller lar en student gjøre jobben for deg.
+
+Om våren blomstrer piletrærne langs The Backs, om sommeren ligger folk i gresset med piknikkurv, om høsten lyser løvet gult mot sandstein, og om vinteren er Cambridge en by av kaffe, bokhandler og åpne peiser i puber med lavt tak.
+
+Byen er liten nok til å gå overalt. Markedsplassen er åpen hver dag, King's Parade er full av småbutikker, og The Eagle er puben der DNA-strukturen ble annonsert over en øl. Her er maten bedre enn ryktet om engelsk mat, og kveldene er rolige og fine.
+
+Cambridge passer for deg som vil ha en by med sjel, ro og noe nytt bak hvert hjørne. Stansted ligger en halvtime unna.`,
+  bullets:["Punting på elva Cam forbi collegene","The Backs og college-hagene i alle årstider","Historiske puber med lavt tak og åpen peis","Markedsplassen og småbutikkene rundt King's Parade","Kompakt by, alt i gangavstand"] },
+
+{ id:"haarlem", top:'Kanaler, torg og handlegater nederlenderne selv kårer til landets beste. Amsterdam et kvarter unna, uten køen.', bottom:'Schiphol er under en halvtime unna. Vi finner hotellet ved kanalen, du velger hvor mange netter, og Amsterdam ligger der hvis du vil ha mer.', name:"Haarlem", meta:"Nederland · 25 min fra Amsterdam Schiphol",
+  title:"Haarlem – Amsterdam-stemning uten Amsterdam-køen",
+  ingress:"Kanaler, brostein og en av Nederlands beste handlegater, bare et kvarter med tog fra Amsterdam. Haarlem er byen nederlenderne selv drar til når de vil ha det koselig.",
+  body:`Haarlem har alt du elsker ved Amsterdam, uten trengselen. Kanalene er like vakre, husene like skjeve, og kafeene langs vannet like innbydende. Men her går du i ditt eget tempo, og bordet ved vinduet er ledig.
+
+Grote Markt er byens hjerte, en av de vakreste torgene i landet, med den enorme kirken på den ene siden og kafeer med uteservering på de andre. Lørdager er det marked, og om vinteren kommer skøytebanen. Rundt torget ligger smågatene med butikker nederlenderne kårer til landets beste, og i Jopenkerk serveres byens eget øl i en gammel kirke.
+
+Om sommeren sykler du til stranden på Zandvoort på tjue minutter. Om våren ligger tulipanmarkene like utenfor byen. Om høsten og vinteren er Haarlem en by for lange lunsjer, brune kafeer og en kveldstur langs opplyste kanaler.
+
+Haarlem er det perfekte valget for deg som vil ha det nederlandske uten å dele det med alle andre. Og skulle du savne storbyen, er Amsterdam et kvarter unna.`,
+  bullets:["Kanaler og brostein uten turistmasser","Grote Markt med marked og vinterskøytebane","Nederlands beste handlegater","Stranden på Zandvoort tjue minutter unna","Amsterdam et kvarter unna med tog"] },
+
+{ id:"delft", top:'Nederlands mest romantiske småby, med kanaler, vindebroer og et torg som står som på 1600-tallet.', bottom:'Delft er en kort togtur fra Schiphol. Bo midt i gamlebyen, bruk dagene langs kanalene og kveldene i brune kafeer. Vi setter det sammen, du bestemmer resten.', name:"Delft", meta:"Nederland · 50 min fra Amsterdam Schiphol",
+  title:"Delft – den blå byen der tiden går saktere",
+  ingress:"Smale kanaler, hvite vindebroer og torget Vermeer malte. Delft er Nederlands mest romantiske småby, og den passer like godt til en vinterhelg som til en sommerkveld.",
+  body:`Delft er byen du har sett på porselen hele livet uten å vite det. De blå og hvite tallerkenene kommer herfra, og byen selv ser ut som motivet: kanaler kantet av lindetrær, buede broer, gavlhus og et torg som står nesten urørt siden 1600-tallet.
+
+Alt ligger innenfor gangavstand. Du begynner morgenen med kaffe ved Oude Delft-kanalen, går forbi Oude Kerk med det skjeve tårnet, og ender på Markt der Nieuwe Kerk ruver i den ene enden og rådhuset i den andre. Torsdager og lørdager fylles torget av marked, og om vinteren er hele byen opplyst med små lys langs kanalene.
+
+Delft er en studentby, så kveldene lever. Kafeene langs Beestenmarkt har uteservering fra april til oktober, og om vinteren krøller du deg sammen inne i en brun kafé med en jenever. Maten er god og uhøytidelig, og Haag med strand og storbyliv er ti minutter unna med trikk.
+
+Delft er for deg som vil ha Nederland i miniatyr: rolig, vakker og ekte.`,
+  bullets:["Kanaler, vindebroer og 1600-tallshus overalt","Markt, et av Nederlands vakreste torg","Studentby med livlige kafeer og kvelder","Haag og stranden ti minutter unna","Alt i gangavstand"] },
+
+{ id:"gent", top:'Middelalderby med tre tårn på rad, kanaler som speiler lysene og et kveldsliv Brugge bare kan drømme om.', bottom:'Fly til Brussel, under en time til Gent. Vi finner hotellet ved Graslei eller i Patershol, og du legger til dagene du vil ha i Brugge eller Antwerpen.', name:"Gent", meta:"Belgia · 50 min fra Brussel",
+  title:"Gent – middelalderby med puls",
+  ingress:"Tre tårn på rad, kanaler som speiler lysene om kvelden, og et ølkart lengre enn menyen. Gent er Brugge med liv i gatene.",
+  body:`Gent er byen som får de fleste til å si «hvorfor har ingen fortalt meg om dette?». Gamlebyen er like vakker som Brugge, med middelalderhus langs elva, steinbroer og det berømte utsynet fra Sint-Michielsbrug der tre tårn står på rad. Men Gent er også en universitetsby med 80 000 studenter, og det merkes: her er det barer, konserter og folk ute til langt på natt.
+
+Dagene bruker du ved Graslei og Korenlei, de gamle havnekaiene der kafeene står tett og folk sitter på kaikanten med en øl når solen skinner. Gravensteen, festningen midt i byen, er fin å gå rundt, men det er gatene i Patershol med små restauranter som får deg til å komme tilbake.
+
+Gent er en matby. Belgisk øl i hundrevis av varianter, vafler, sjokolade og en restaurantscene som er langt mer spennende enn størrelsen tilsier. Om vinteren lyser byen opp med Belgias vakreste julemarked, og om sommeren fylles gatene av gatefestivaler.
+
+Gent passer for deg som vil ha det historiske, men også vil ha det levende.`,
+  bullets:["Utsikten fra Sint-Michielsbrug med tre tårn på rad","Graslei og Korenlei med kafeer ved vannet","Patershol med små restauranter i smale gater","Belgisk øl, vafler og sjokolade","Universitetsby med liv hele året"] },
+
+{ id:"lund", top:'Nordens eldste universitetsby, med brostein, blomsterhager og domkirke, en halvtime over broen fra København.', bottom:'Fly til København, tog over Øresund. Bo i gamlebyen i Lund, legg til en dag i Malmö eller ved kysten, og kom hjem uthvilt.', name:"Lund", meta:"Sverige · 35 min fra København",
+  title:"Lund – brostein, domkirke og studentliv i Skåne",
+  ingress:"En av Nordens eldste byer, med smale gater, blomstrende hager og kafeer som fylles av studenter. Lund er en helg i ro, bare over broen fra København.",
+  body:`Lund er en by du går gjennom på en ettermiddag og vil bli i en uke. Gatene er smale og brolagte, husene lave og fargerike, og hagene velter ut over gjerdene. Midt i det hele står domkirken fra 1100-tallet, der det astronomiske uret slår to ganger om dagen.
+
+Byen lever av universitetet, og det gir en helt egen stemning: kafeer i gamle hus, bokhandler, småbutikker og puber som har stått siden 1800-tallet. Kulturen ligger rett utenfor, med Botaniska trädgården som er byens stue om sommeren og lysende om høsten. Om vinteren lyser Lund opp med adventslys i hvert vindu, og i april feirer hele byen Valborg med sang og piknik i parkene.
+
+Lund ligger midt i Skåne, så Malmö, kysten og de skånske slottene ligger en kort tur unna. Og København er en halvtime over Øresundsbroen, med alt storbyen har å by på.
+
+Lund er for deg som vil ha det rolige, vakre og nære. En helg her kjennes lenger enn den er.`,
+  bullets:["Domkirken og det astronomiske uret","Smale brosteinsgater med lave, fargerike hus","Botaniska trädgården, byens grønne hjerte","Kafeer, bokhandler og studentpuber","København en halvtime unna"] },
+
+{ id:"potsdam", top:'Slott, parker og innsjøer så langt du ser. Byen Berlins elite dro til for å puste, tre kvarter fra byen.', bottom:'Berlin er tre kvarter unna med tog. Vi finner hotellet ved parken eller i det nederlandske kvarteret, og du velger om Berlin skal være én dag eller tre.', name:"Potsdam", meta:"Tyskland · 45 min fra Berlin",
+  title:"Potsdam – slott, innsjøer og en by i hagen",
+  ingress:"Hundre slott, tusen hageganger og innsjøer rundt hele byen. Potsdam er der Berlins elite dro for å puste, og der du drar for å gjøre det samme.",
+  body:`Potsdam er en by bygget for nytelse. Prøyssiske konger la slott etter slott i parkene, og i dag går du fritt mellom dem gjennom kilometer med alleer, fontener og terrasser. Sanssouci er det mest kjente, men det er helheten som tar pusten fra deg: en by der halve arealet er park og vann.
+
+Sentrum er lite og vakkert. Det nederlandske kvarteret med røde mursteinshus er fullt av kafeer og småbutikker, og Brandenburger Strasse er en hyggelig handlegate. Om sommeren bader du i Heiliger See midt i byen, leier båt eller sykler rundt innsjøene. Om høsten blir parkene gyldne, og om vinteren går du i stille, snødekte alleer med byens julemarked i enden.
+
+Potsdam har gode restauranter, vinbarer og et rolig kveldsliv, og Berlin er tre kvarter unna med tog hvis du vil ha mer tempo.
+
+Potsdam er for deg som vil ha det grønne, det staselige og det rolige, uten å være langt fra storbyen.`,
+  bullets:["Sanssouci og parkene du kan gå i hele dagen","Det nederlandske kvarteret med kafeer og butikker","Bading og båt på innsjøene om sommeren","Snødekte alleer og julemarked om vinteren","Berlin tre kvarter unna"] },
+
+{ id:"heidelberg", top:'Et rødt slott over elva, en gammel steinbro og Tysklands lengste gågate. Den tyske romantikken, på ekte.', bottom:'Fly til Frankfurt, under en time til Heidelberg. Bo i gamlebyen med slottet i vinduet, legg til Pfalz-vin og en dag i Speyer eller Mannheim.', name:"Heidelberg", meta:"Tyskland · 1 time fra Frankfurt",
+  title:"Heidelberg – slottet over elva og Tysklands lengste handlegate",
+  ingress:"Et rødt slott i åssiden, en gammel steinbro over Neckar og en gamleby full av studenter. Heidelberg er den tyske romantikken på ekte.",
+  body:`Heidelberg ligger i en elvedal så vakker at den ble et symbol på hele den tyske romantikken. Slottsruinen av rød sandstein henger over byen, Neckar renner stille under den gamle broen, og gamlebyen strekker seg langs elva med Hauptstrasse, en handlegate på over en kilometer uten en eneste bil.
+
+Byen er en av Tysklands eldste universitetsbyer, og det merkes i studentkneipene, de små bokhandlene og de fulle uteserveringene så snart solen titter frem. Du går opp til slottet, med bergbane eller til fots, og ser hele dalen under deg. Du krysser elva og går Philosophenweg, stien der professorene gikk for å tenke, med byens beste utsikt.
+
+Om sommeren er elvebredden full av folk, om høsten lyser skogene i åsene, og om vinteren er Heidelberg en av Tysklands fineste julebyer med marked på flere plasser i gamlebyen.
+
+Heidelberg er for deg som vil ha det tyske koselige: vin fra Pfalz, hjemmelaget mat, brostein og et slott du ser fra hotellvinduet.`,
+  bullets:["Slottsruinen med utsikt over hele dalen","Den gamle broen og Philosophenweg","Hauptstrasse, Tysklands lengste gågate","Studentkneiper og uteserveringer","Julemarked over hele gamlebyen"] },
+
+{ id:"annecy", top:'Alpenes Venezia: kanaler, pastellhus og en turkis innsjø med fjell på alle kanter. Like fin med ski som med badetøy.', bottom:'Genève er tre kvarter unna. Vi setter sammen fly, hotell i gamlebyen og leiebil hvis du vil opp i fjellet. Du velger årstid, vi ordner resten.', name:"Annecy", meta:"Frankrike · 45 min fra Genève",
+  title:"Annecy – Alpenes Venezia med turkis innsjø",
+  ingress:"Kanaler med blomsterkasser, pastellhus, fjell på alle kanter og en innsjø så klar at du ser bunnen. Annecy er Frankrikes vakreste småby, sommer som vinter.",
+  body:`Annecy ligger der innsjøen møter fjellene, og det er vanskelig å finne en vakrere plassering i Europa. Gamlebyen er et nett av kanaler med pastellfargede hus, broer med blomsterkasser og små restauranter med bord helt ute i vannkanten. Midt i det hele ligger Palais de l'Isle, det lille slottet på en øy i kanalen.
+
+Om sommeren er Annecy en badeby. Innsjøen er turkis og ren, strendene ligger langs promenaden, og du leier båt eller sykkel og følger stien rundt vannet. Om vinteren er du 30 minutter fra skibakkene i La Clusaz og Le Grand-Bornand, og byen selv har julemarked og vin chaud langs kanalene. Vår og høst er fjellene i sin fineste farge og turstiene nesten tomme.
+
+Maten er savoyardisk: tartiflette, raclette, fondue og lokal ost, sammen med viner fra Savoie. Markedet på tirsdag, fredag og søndag er noe av det beste i Frankrike.
+
+Annecy er for deg som vil ha fjell og vann på én gang, med fransk mat og småbystemning på kjøpet.`,
+  bullets:["Kanaler, pastellhus og Palais de l'Isle","Bading og båt i Europas reneste innsjø","Skibakker en halvtime unna om vinteren","Savoyardisk mat og lokalt marked","Fjell og vann på én gang"] },
+
+{ id:"sitges", top:'Hvit gamleby, sytten strender og sol hele året. Den spanske strandbyen med stil, en halvtime fra Barcelona.', bottom:'Fly til Barcelona, en halvtime til Sitges. Bo ved promenaden eller i gamlebyen, legg til Barcelona-dagene du vil ha, og ta med solen hjem.', name:"Sitges", meta:"Spania · 30 min fra Barcelona",
+  title:"Sitges – hvite hus, strandpromenade og sol hele året",
+  ingress:"Sytten strender, en gamleby i hvitt og et kveldsliv som er legendarisk. Sitges er den spanske strandbyen med stil, en halvtime fra Barcelona.",
+  body:`Sitges ligger på en liten odde mellom fjell og hav, og byen er bygget for å nyte livet. Gamlebyen er et nett av hvite hus og smale gater som ender ved kirken på klippen, med strender på begge sider. Strandpromenaden går kilometer etter kilometer med palmer, kafeer og folk som rusler i det gylne lyset.
+
+Sitges er en av Spanias solrikeste byer, og det gjør den til et helårsmål. Om vinteren spiser du lunsj ute i t-skjorte mens Barcelona ligger i tåke, og om sommeren fylles strendene av folk fra hele Europa. Karnevalet i februar er blant de villeste i landet, og om høsten feires lokal vin og filmfestival.
+
+Byen har et stort utvalg av restauranter, fra tapasbarer i gamlebyen til fiskerestauranter rett på stranden. Kveldene er livlige, åpne og inkluderende, og byen er kjent for å ta vare på alle.
+
+Sitges er for deg som vil ha strand, sol og stemning med Barcelona en halvtime unna når du vil ha storbyen.`,
+  bullets:["Sytten strender og en lang palmepromenade","Hvit gamleby med smale gater","Sol og uteliv også om vinteren","Spanias livligste karneval i februar","Barcelona en halvtime unna"] },
+
+{ id:"sintra", top:'Eventyrslott i skogen, tåke mellom trærne og Atlanterhavet rett nedenfor. Portugals grønneste helg, førti minutter fra Lisboa.', bottom:'Lisboa er førti minutter unna. Vi finner et hotell i landsbyen eller en quinta i åsene, og du legger til kysten, Cascais eller hovedstaden.', name:"Sintra", meta:"Portugal · 40 min fra Lisboa",
+  title:"Sintra – eventyrslott i skogen og Atlanterhavet rett nedenfor",
+  ingress:"Palasser i pastellfarger på fjelltopper, tåke som driver gjennom skogen, og en kyst med Europas vestligste punkt. Sintra er der Portugals konger dro for å drømme.",
+  body:`Sintra er en by som ikke ligner på noe annet. Den ligger i en skogkledd fjellkjede der kongene bygde sommerslott i alle farger og stiler: det gule og røde Pena høyt på toppen, det mauriske slottet med murer over åsene, og Quinta da Regaleira med hemmelige tunneler og brønner. Landsbyen under er full av trange gater, konditorier og små restauranter.
+
+Klimaet gjør Sintra til et helårsmål. Om sommeren er det kjølig i skogen når Lisboa koker, og du drar ned til strendene på Praia das Maçãs og Cabo da Roca der Europa slutter. Om vinteren er det mildt, grønt og mystisk med tåke mellom trærne. Vår og høst er sesongen for å gå i fjellet uten varme eller mengder.
+
+Spis travesseiros på Piriquita, drikk portugisisk vin på en terrasse med utsikt, og ta toget til Lisboa om kvelden hvis du vil ha storbyen.
+
+Sintra er for deg som vil ha det grønne og det eventyrlige, med hav og hovedstad i rekkevidde.`,
+  bullets:["Pena-palasset og de andre slottene i fjellet","Quinta da Regaleira med hager og tunneler","Cabo da Roca og strendene en kort tur unna","Mildt klima og grønt hele året","Lisboa førti minutter unna"] },
+
+{ id:"krakow", top:'Europas største middelaldertorg, kjellerbarer og Kazimierz. Byen som alltid har noe på gang, tjue minutter fra flyplassen.', bottom:'Direktefly, tjue minutter inn til gamlebyen. Bo rundt torget eller i Kazimierz, bruk kveldene i kjellerne og dagene til fots. Vi setter det sammen, du gjør det til din.', name:"Kraków", meta:"Polen · 20 min fra flyplassen",
+  title:"Kraków – Europas største middelaldertorg og et nattliv uten like",
+  ingress:"Et torg på størrelse med to fotballbaner, hestevogner, kjellerbarer og Kazimierz med sine jødiske kafeer. Kraków er byen som alltid har noe på gang, uansett årstid.",
+  body:`Kraków er den polske byen som overlevde alt, og i dag står gamlebyen like vakker som for 600 år siden. Rynek Główny er Europas største middelaldertorg, med Klesshallen i midten, Mariakirken med trompetisten som blåser fra tårnet hver time, og kafeer rundt hele kanten. Rundt det hele går Planty, en grønn park der bymuren stod.
+
+Byen er liten nok til å gå, og du bruker dagene på å finne kjellerkafeene under torget, gå opp til Wawel-slottet ved elva og vandre i Kazimierz, det gamle jødiske kvarteret som nå er byens mest kreative bydel med barer, gatemat og konserter.
+
+Kraków er en by for alle årstider: julemarked og snø på torget om vinteren, uteserveringer og jazzfestival om sommeren, gyldne parker om høsten og studentfest om våren. Maten er god og rimelig, fra pierogi til moderne polsk kjøkken, og vodkaen smaker bedre her.
+
+Kraków er for deg som vil ha det historiske og det levende på en gang, med flyplassen tjue minutter unna.`,
+  bullets:["Rynek Główny, Europas største middelaldertorg","Kazimierz med barer, gatemat og konserter","Kjellerkafeer og vodkabarer under byen","Wawel-slottet og elvepromenaden","Alt i gangavstand"] }
+];
+const tc=p=>TC_BASE.replace(/\/+$/,"")+"/"+p;
+const dest=id=>tc(`no/destination/${CODES[id]}?tripType=FLIGHT_HOTEL`);
+const app=document.getElementById("app");
+let html=`<section class="page" id="oversikt">
+<div class="crumb"><a href="${FORSIDE}">Forsiden</a> › Småbyer</div>
+<div class="intro"><h1>Småbyer med stor stemning</h1><p>Tolv byer du ikke har tenkt på, alle under en time fra flyplassen og fine hele året. Velg by, velg datoer, så setter vi sammen fly og hotell. Resten legger du til selv.</p></div>
+<div class="cards byer">${data.map(c=>`<a class="card" href="#${c.id}"><div class="ph"><img src="${IMG[c.id].card}" alt="${c.name}"></div><div class="b"><h3>${c.name}</h3><div class="m">${c.meta}</div><div class="f"><span class="pris">Se priser<small>fly + hotell</small></span><span class="go">Se reisen →</span></div></div></a>`).join("")}</div>
+</section>`;
+data.forEach((c,i)=>{
+  const prev=data[(i+data.length-1)%data.length], next=data[(i+1)%data.length];
+  html+=`<section class="page" id="${c.id}">
+<div class="crumb"><a href="${FORSIDE}">Forsiden</a> › <a href="#oversikt">Småbyer</a> › ${c.name}</div>
+<div class="chero"><img class="bg" src="${IMG[c.id].hero}" alt=""><div class="veil"></div><div class="in"><div class="kick">${c.meta}</div><h1>${c.title}</h1><p>${c.top}</p>
+<div class="cta"><a class="btn btn-hot" href="${dest(c.id)}" target="_blank" rel="noopener">Søk fly + hotell til ${c.name}</a><a class="btn btn-white" href="${dest(c.id)}" target="_blank" rel="noopener">Hoteller og opplevelser</a></div></div></div>
+<div class="content"><div><p class="ingress">${c.ingress}</p><div class="body">${c.body.split("\n\n").map(p=>`<p>${p}</p>`).join("")}</div></div>
+<aside class="side"><div class="kick">Derfor ${c.name}</div><ul>${c.bullets.map(b=>`<li>${b}</li>`).join("")}</ul><a class="btn btn-hot" href="${dest(c.id)}" target="_blank" rel="noopener">Velg datoer og se pris</a></aside></div>
+<div class="bottom"><p>${c.bottom}</p><a class="btn btn-white" href="${dest(c.id)}" target="_blank" rel="noopener">Sett sammen reisen</a></div>
+<div class="nextprev"><a href="#${prev.id}">← ${prev.name}</a><a href="#oversikt">Alle byer</a><a href="#${next.id}">${next.name} →</a></div>
+</section>`;
+});
+app.innerHTML=html;
+document.querySelectorAll("[data-tc]").forEach(a=>{a.href=tc(a.getAttribute("data-tc"));a.target="_blank";a.rel="noopener";});
+function route(){const h=location.hash.slice(1);const id=data.some(c=>c.id===h)?h:"oversikt";document.querySelectorAll(".page").forEach(p=>p.classList.toggle("on",p.id===id));window.scrollTo(0,0);}
+addEventListener("hashchange",route);route();
+</script>
+
+<footer class="vg-foot"><div class="vg-in"><div><a href="index.html"><img src="img/vagonto-logo.png" alt="Vagonto"></a>Vagonto AS · Oslo · Norway</div><div><a href="mailto:info@vagonto.com">info@vagonto.com</a><br><a href="tel:+4723910595">23 91 05 95</a></div><nav><a href="om-oss.html">Om oss</a><a href="bli-reiseskaper.html">Bli reiseskaper</a><a href="https://booking.vagonto.com/no/">Til bookingen</a></nav></div></footer>
+</body></html>

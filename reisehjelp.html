@@ -1,0 +1,184 @@
+<!doctype html><html lang="no"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Reisehjelp – si hva du har lyst på | Vagonto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--ground:#F4F6F1;--surface:#FFFFFF;--surface-2:#E7ECE5;--ink:#143528;--ink-soft:#4C6558;--ink-faint:#7C9186;--line:#DDE4DB;--hot:#17698F;--brand:#2E9BD6;--brand-soft:#DFEFF9;--shadow:0 2px 6px rgba(20,53,40,.06),0 14px 34px rgba(20,53,40,.10)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){color-scheme:dark;--ground:#0E1712;--surface:#16241D;--surface-2:#22322A;--ink:#E7EEE8;--ink-soft:#A3B6AA;--ink-faint:#7A8D82;--line:#2C3A33;--hot:#6EC1EA;--brand:#6EC1EA;--brand-soft:#10303F;--shadow:0 2px 6px rgba(0,0,0,.4),0 14px 34px rgba(0,0,0,.45)}}
+:root[data-theme="dark"]{color-scheme:dark;--ground:#0E1712;--surface:#16241D;--surface-2:#22322A;--ink:#E7EEE8;--ink-soft:#A3B6AA;--ink-faint:#7A8D82;--line:#2C3A33;--hot:#6EC1EA;--brand:#6EC1EA;--brand-soft:#10303F;--shadow:0 2px 6px rgba(0,0,0,.4),0 14px 34px rgba(0,0,0,.45)}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Poppins","Segoe UI",Helvetica,Arial,sans-serif;font-size:15.5px;line-height:1.55;padding-inline:16px;padding-block:0 24px;display:flex;flex-direction:column}
+.wrap{max-width:860px;margin-inline:auto;width:100%;display:flex;flex-direction:column;flex:1;min-height:0}
+header{display:flex;align-items:center;gap:14px;padding:18px 0 12px;border-bottom:1px solid var(--line)}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.04em}.logo span{color:var(--brand)}
+header small{color:var(--ink-faint);font-size:12.5px}
+.chat{flex:1;overflow:auto;padding:18px 0 12px;display:flex;flex-direction:column;gap:14px}
+.msg{max-width:80%;padding:12px 16px;border-radius:16px;font-size:15px}
+.me{align-self:flex-end;background:var(--ink);color:#fff;border-bottom-right-radius:4px}
+:root[data-theme="dark"] .me{background:var(--brand);color:#08222F}
+.bot{align-self:flex-start;background:var(--surface);border:1px solid var(--line);border-bottom-left-radius:4px}
+.bot p{margin:0 0 8px}.bot p:last-child{margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;margin-top:10px}
+.card{display:flex;flex-direction:column;gap:4px;padding:12px 14px;border-radius:12px;background:var(--ground);border:1px solid var(--line);color:inherit;text-decoration:none;transition:transform .12s ease,box-shadow .12s ease}
+.card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.card b{font-size:14.5px;line-height:1.3}
+.card span{font-size:13px;color:var(--ink-soft)}
+.card em{font-style:normal;font-size:12.5px;color:var(--hot);font-weight:600;margin-top:4px}
+.thinking{color:var(--ink-faint);font-size:14px}
+.trip{margin-top:10px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--ground)}
+.trip-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:12px 14px;background:var(--brand-soft);font-size:14.5px}
+.trip-h span{color:var(--ink-soft);font-size:13px}
+.stop{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:12px 14px;border-top:1px solid var(--line)}
+.stop .n{width:26px;height:26px;border-radius:50%;background:var(--hot);color:#fff;font-weight:700;font-size:13px;display:grid;place-items:center}
+.sb{display:flex;flex-direction:column;gap:3px;font-size:13.5px}
+.sb b{font-size:15px}.sb b em{font-style:normal;font-weight:500;color:var(--ink-faint);font-size:13px;margin-left:6px}
+.sb span{color:var(--ink-soft)}
+.sb a{color:var(--hot);font-weight:600;font-size:13px;margin-top:3px}
+.why{padding:10px 14px 0;color:var(--ink-soft);font-size:13.5px;margin:0}
+.acts{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 14px 14px}
+.btn-ink{background:var(--ink);color:#fff;border-radius:999px;padding:9px 16px;font-weight:600;font-size:14px}
+:root[data-theme="dark"] .btn-ink{background:var(--brand);color:#08222F}
+.lnk{color:var(--hot);font-weight:600}
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:6px 0 10px}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink-soft);border-radius:999px;padding:7px 13px;font:inherit;font-size:13.5px;cursor:pointer}
+.chip:hover{border-color:var(--hot);color:var(--hot)}
+form{display:flex;gap:10px;padding-top:10px;border-top:1px solid var(--line)}
+input{flex:1;font:inherit;padding:13px 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+input:focus{outline:2px solid var(--hot);outline-offset:2px}
+button.send{font:inherit;font-weight:600;padding:12px 20px;border-radius:999px;border:0;background:var(--hot);color:#fff;cursor:pointer}
+button.send:disabled{opacity:.5;cursor:default}
+.note{font-size:12.5px;color:var(--ink-faint);margin-top:8px}
+.off{padding:14px 16px;border:1px dashed var(--line);border-radius:12px;color:var(--ink-soft);font-size:14px}
+:focus-visible{outline:2px solid var(--hot);outline-offset:2px}
+</style>
+<meta name="description" content="Fortell hva du har lyst på, så setter vi sammen et forslag med stopp, netter og hotell.">
+<meta name="robots" content="noindex, nofollow"><!-- FJERNES VED LANSERING -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="chrome.css">
+<style>#f input{min-width:0}</style>
+</head>
+<body>
+<header class="vg-top"><div class="vg-in"><a class="vg-logo" href="index.html"><img src="img/vagonto-logo.png" alt="Vagonto"></a><nav class="vg-nav" aria-label="Hovedmeny"><a href="index.html">Forside</a><a href="reiseforslag.html">Reiseforslag</a><a href="smabyer.html">Småbyer</a><a href="montenegro.html">Montenegro</a><a href="pakk-reisen-selv.html">Pakk reisen selv</a><a href="bli-reiseskaper.html">Bli reiseskaper</a><a href="om-oss.html">Om oss</a></nav><a class="vg-cta" href="https://booking.vagonto.com/no/">Book en reise</a></div></header>
+<div class="wrap">
+<header data-old hidden style="display:none"><div class="logo">VAGONT<span>O</span></div><small>Reisehjelp · utkast · setter sammen reiser av det vi faktisk kan booke</small></header>
+
+<div class="chat" id="chat">
+  <div class="msg bot"><p>Hei! Si hva du har lyst på – to uker i Vietnam med strand på slutten, en by du ikke har vært i, varmt i februar uten Kanariøyene – så setter jeg sammen et forslag med stopp, netter og hotell. Så fikser vi på det til det stemmer.</p></div>
+</div>
+<div class="chips" id="chips">
+  <button class="chip" type="button">To uker i Vietnam i mars, litt strand på slutten</button>
+  <button class="chip" type="button">En by utenfor Europa, 5 netter</button>
+  <button class="chip" type="button">Japan i april, 10 dager, første gang</button>
+  <button class="chip" type="button">Direktefly fra Oslo, 7 netter, 4–5 stjerner</button>
+</div>
+<form id="f"><input id="q" placeholder="Hva har du lyst på?" autocomplete="off"><button class="send" id="send" type="submit">Send</button></form>
+<div class="note">Forslaget settes sammen av steder vi kan booke. Ingen kall mot bookingsystemet før du trykker deg inn. (Utkast: reisen kan ennå ikke sendes ferdig utfylt inn i søket.)</div>
+</div>
+
+<script>
+const TC="https://booking.vagonto.com";
+const KATALOG={
+ pakker:[
+  {t:"Gran Canaria – 7 netter, direktefly og 4–5★ hotell",u:TC+"/no/idea/64575487/gran-canaria-7-netter-direktefly-og-4-5-hotell",n:"Norwegian direkte fra Oslo, privat transfer, 8 hoteller i Meloneras/Playa del Inglés. Avganger ti+lø des–mars. Ca 17 199 kr pp."},
+  {t:"Maldivene og Dubai – 9 netter",u:TC+"/no/idea/57534464/din-reise-til-nord-male-atoll-og-dubai",n:"Tre netter Dubai, resten på øy i Nord Malé-atollen. Ca 94 685 kr pp."},
+  {t:"Peru på ni dager – rundreise",u:TC+"/no/idea/54825822/discovered-peru-09-days-08-nights",n:"Lima, Cusco, Den hellige dal, Machu Picchu. Ca 46 132 kr pp."},
+  {t:"Costa Rica rundt – 11 netter",u:TC+"/no/idea/41710974/-cost-rica",n:"Regnskog, vulkaner, Stillehavskysten. Ca 81 366 kr pp."},
+  {t:"Barcelona, 3 netter",u:TC+"/no/idea/41486009/barcelona-spain",n:"Storbyhelg. Ca 10 500 kr pp."},
+  {t:"Manchester, 3 netter",u:TC+"/no/idea/41416298/manchester-united-kingdom",n:"Kamp, konsert, shopping. Ca 16 072 kr pp."},
+  {t:"Albania – rivieraen (landsside)",u:TC+"/no/landing/32947/albania",n:"Ksamil, Sarandë, Dhërmi, Himarë, Tirana. Velg hotell, legg til fly. Sesong mai–oktober. Halve prisen av Hellas."}
+ ],
+ /* destinasjoner: kode, navn, notat (sesong, direktefly fra Oslo, type) */
+ dest:[
+  ["LPA","Gran Canaria","vintersol okt–apr, direktefly Norwegian, strand"],["TCI","Tenerife","vintersol, direktefly, strand, Teide"],["ACE-10","Lanzarote","vintersol, direktefly, rolig"],
+  ["ALC","Costa Blanca/Alicante","vår–høst, direktefly, billig"],["AGP","Costa del Sol","vår–høst, direktefly, golf, Málaga by"],["PMI--1","Mallorca","mai–okt, direktefly, familie"],
+  ["ATE","Kreta","mai–okt, direktefly sommer, strand+kultur"],["RHO","Rhodos","mai–okt, direktefly sommer"],["AYT","Antalya","apr–nov, all inclusive, direktefly sommer"],
+  ["HRG-1","Hurghada","vintersol, dykking, mellomlanding"],["FNC-1","Madeira","helår mildt, vandring, ikke strand"],["MLA-1a","Malta","vår–høst, kultur"],
+  ["VOE-1","Vlorë (Albania)","mai–okt"],["SDE-1","Sarandë (Albania)","mai–okt, strand"],["Ksamil","Ksamil (Albania)","juni–sept, turkis strand"],
+  ["LON","London","helår, storbyhelg, direktefly"],["PAR","Paris","helår, storbyhelg, direktefly"],["BCN","Barcelona","helår, storbyhelg, direktefly"],["ROE","Roma","vår/høst best, direktefly"],
+  ["BER","Berlin","helår, direktefly"],["AMS","Amsterdam","helår, direktefly"],["KRK","Kraków","helår, billig, direktefly"],["PRG","Praha","helår, direktefly"],["LIS","Lisboa","helår mildt, direktefly"],
+  ["CPH","København","helår, tog/fly"],["IST","Istanbul","vår/høst, direktefly, mat+kultur"],["MIL","Milano","helår, mote, direktefly"],["GDN","Gdańsk","helår, billig"],
+  ["NYC","New York","helår, direktefly Norwegian, storby"],["MIA","Miami","vintersol, mellomlanding"],["MCO","Orlando","familie, mellomlanding"],
+  ["DXB","Dubai","nov–apr, direktefly Emirates, sol+storby"],["BKK","Bangkok","nov–mar, direktefly Norwegian, storby+mat"],["HKT","Phuket","nov–apr, strand"],["KBV","Krabi","nov–apr, strand, rolig"],["USM-22","Koh Samui","jan–sept"],
+  ["HAN-1","Hanoi","okt–apr, kultur, Ha Long"],["DAD-1","Hoi An","feb–aug, strand+gamleby"],["SGN-1","Ho Chi Minh","des–apr"],["SGN-2","Phu Quoc","nov–apr, strand"],
+  ["BAI","Bali","apr–okt tørt, kultur+strand"],["SIN","Singapore","helår, storby, mellomlanding til Asia"],["KUL","Kuala Lumpur","helår"],
+  ["NRT-1","Tokyo","mar–mai, okt–nov, storby"],["KIX","Kyoto","vår/høst, kultur"],["ITM","Osaka","mat"],["OKW-16","Okinawa","strand Japan"],
+  ["CMB-1","Colombo / Sri Lanka","des–apr, te, strand, tempel"],["MV","Maldivene","nov–apr, vannvilla, bryllupsreise"],["MRU","Mauritius","mai–des, strand+luksus"],["PRI","Seychellene","apr–mai, okt–nov"],
+  ["ZNZ","Zanzibar","jun–okt, des–feb, strand, kombiner med safari"],["ARK","Arusha","safari Serengeti jun–okt"],["NAI","Nairobi","safari"],["CPT","Cape Town","nov–mar, by+vin+Garden Route"],["RAK","Marrakech","mar–mai, okt–nov, kultur"],
+  ["CUN","Cancún","des–apr, strand"],["PCM","Riviera Maya","des–apr, Tulum, strand+ruiner"],["CAB","Los Cabos","nov–apr"],["HAV","Havanna","nov–apr, kultur"],["PUJ","Punta Cana","des–apr, all inclusive"],
+  ["LIM","Lima","rundreise Peru"],["CUZ","Cusco","Machu Picchu, mai–sept"],["BUE","Buenos Aires","okt–apr"],["SJO-10","San José Costa Rica","des–apr"],["SYD","Sydney","okt–mar"],
+  ["REK","Reykjavik","helår, nordlys sept–mar"],["TRO","Tromsø","nordlys nov–mar"],["LofotenIslands","Lofoten","sommer/nordlys"]
+ ]
+};
+const REGLER=`Du er Vagontos reisehjelp. Vagonto er et norsk reiseselskap der kunden setter sammen fly, hotell, transfer og opplevelser i ett søk, kan lagre reisen og fikse på den, og booke alt i én bestilling med reisegaranti og folk i Norge å ringe.
+Oppgaven din er å SETTE SAMMEN EN REISE for kunden – ikke bare peke på destinasjoner. Lag et konkret forslag: rekkefølge på steder, antall netter hvert sted, hva slags hotell (område og standard, gjerne et navngitt hotell hvis du kjenner et som finnes), hvordan man kommer seg mellom stedene (fly/tog/leiebil/transfer), og 1–2 ting å gjøre hvert sted. Bruk bare steder som finnes i destinasjonslisten under (med kode). Hvis kunden er vag, foreslå likevel én konkret reise og still ett spørsmål for å justere.
+Hvis en av de ferdige pakkene passer svært godt, nevn den som alternativ.
+Språk: norsk bokmål, folkelig og varmt. Bruk «sett sammen», «pakk reisen selv», «fiks på den», «book». Aldri «lag», «bygg», «prises», «modul», «produkt». Ingen emoji. Ingen priser, vilkår, avbestilling eller bagasje.
+Svar KUN med JSON på formen:
+{"intro":"1–2 setninger som svarer personlig på det kunden skrev",
+ "reise":{"tittel":"kort navn på reisen","netter":tall,"hvorfor":"én setning",
+   "stopp":[{"sted":"navn","kode":"kode fra listen","netter":tall,"hotell":"område/standard eller navn","reise":"hvordan man kommer hit (fra forrige stopp, eller fra Oslo)","gjor":"1–2 ting å gjøre"}]},
+ "pakke":{"tittel":"…","url":"…"} eller null,
+ "oppfolging":"ett kort spørsmål for å justere, eller tom streng"}
+
+KATALOG
+Pakker: ${JSON.stringify(KATALOG.pakker)}
+Destinasjoner [kode, navn, notat]: ${JSON.stringify(KATALOG.dest)}`;
+
+const chat=document.getElementById('chat'), form=document.getElementById('f'), q=document.getElementById('q'), send=document.getElementById('send');
+const turns=[]; let sample=null, ctl=null;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function add(cls,html){const d=document.createElement('div'); d.className='msg '+cls; d.innerHTML=html; chat.appendChild(d); chat.scrollTop=chat.scrollHeight; return d;}
+function parseJSON(t){ try{return JSON.parse(t);}catch(_){} const m=t.match(/```(?:json)?\s*([\s\S]*?)```/); if(m){try{return JSON.parse(m[1]);}catch(_){}} const i=t.indexOf('{'),j=t.lastIndexOf('}'); if(i>=0&&j>i){try{return JSON.parse(t.slice(i,j+1));}catch(_){}} return null; }
+function render(r){
+  const TCD=k=>`${TC}/no/destination/${encodeURIComponent(k)}?tripType=FLIGHT_HOTEL`;
+  let h=`<p>${esc(r.intro||'')}</p>`;
+  const t=r.reise;
+  if(t&&Array.isArray(t.stopp)&&t.stopp.length){
+    h+=`<div class="trip"><div class="trip-h"><b>${esc(t.tittel||'Reisen din')}</b><span>${esc(String(t.netter||t.stopp.reduce((a,s)=>a+(+s.netter||0),0)))} netter · ${t.stopp.length} stopp</span></div>`;
+    h+=t.stopp.map((s,i)=>`<div class="stop"><div class="n">${i+1}</div><div class="sb"><b>${esc(s.sted)} <em>${esc(String(s.netter||''))} ${(+s.netter===1)?'natt':'netter'}</em></b>
+      ${s.reise?`<span>✈ ${esc(s.reise)}</span>`:''}${s.hotell?`<span>🛏 ${esc(s.hotell)}</span>`:''}${s.gjor?`<span>★ ${esc(s.gjor)}</span>`:''}
+      <a href="${TCD(s.kode)}" target="_blank" rel="noopener">Velg hotell i ${esc(s.sted)} →</a></div></div>`).join('');
+    if(t.hvorfor) h+=`<p class="why">${esc(t.hvorfor)}</p>`;
+    h+=`<div class="acts"><a class="btn-ink" href="${TC}/no/tripplanner" target="_blank" rel="noopener">Sett sammen denne i Vagonto →</a><button type="button" class="chip" data-tweak="Gjør reisen kortere">Kortere</button><button type="button" class="chip" data-tweak="Bytt ut ett av stoppene med noe roligere">Roligere</button><button type="button" class="chip" data-tweak="Legg til strand på slutten">Mer strand</button></div></div>`;
+  }
+  if(r.pakke&&r.pakke.url) h+=`<p style="margin-top:10px">Vil du ha noe ferdig? <a class="lnk" href="${esc(r.pakke.url)}" target="_blank" rel="noopener">${esc(r.pakke.tittel)} →</a></p>`;
+  if(r.oppfolging) h+=`<p style="margin-top:10px">${esc(r.oppfolging)}</p>`;
+  return h;
+}
+async function ask(text){
+  if(!sample||!text.trim()) return;
+  add('me',esc(text)); q.value=''; send.disabled=true;
+  const bot=add('bot','<span class="thinking">Leter i reisene våre …</span>');
+  turns.push({role:'user',content:text});
+  ctl=new AbortController();
+  try{
+    const res=await sample([{role:'user',content:REGLER},...turns.slice(-8)],{cache:false,signal:ctl.signal,onText:({text})=>{bot.innerHTML='<span class="thinking">Skriver …</span>';}});
+    const r=parseJSON(res.text);
+    if(!r) throw {code:'invalid_json',message:'no json',text:res.text};
+    bot.innerHTML=render(r);
+    turns.push({role:'assistant',content:JSON.stringify(r)});
+  }catch(e){
+    const m={not_granted:'Reisehjelpen er ikke slått på for denne visningen.',rate_limited:'Litt for mange spørsmål på rad – prøv igjen om et øyeblikk.',invalid_json:'Jeg rotet det til – prøv å spørre på en litt annen måte.',refused:'Det kan jeg ikke hjelpe med her.'};
+    console.error('reisehjelp',e);
+    bot.innerHTML=`<p>${esc(m[e.code]||'Noe gikk galt. Prøv igjen.')}</p><p class="thinking">(${esc(e.code||'')} ${esc(e.message||'')})</p>`;
+    turns.pop();
+  }finally{ send.disabled=false; chat.scrollTop=chat.scrollHeight; }
+}
+form.addEventListener('submit',e=>{e.preventDefault(); ask(q.value);});
+document.getElementById('chips').addEventListener('click',e=>{const b=e.target.closest('.chip'); if(b) ask(b.textContent);});
+chat.addEventListener('click',e=>{const b=e.target.closest('[data-tweak]'); if(b) ask(b.dataset.tweak);});
+send.disabled=true; send.textContent='Laster …';
+(async()=>{
+  try{ sample = window.claude && window.claude.use ? await window.claude.use('sample') : null; }catch(e){ console.error(e); sample=null; }
+  if(!sample){ add('bot','<div class="off">Reisehjelpen fikk ikke kontakt med Claude i denne visningen (window.claude '+(window.claude?'finnes':'mangler')+'). Prøv å åpne lenken i nettleseren på claude.ai.</div>'); send.textContent='Send'; return; }
+  send.disabled=false; send.textContent='Send';
+})();
+</script>
+
+
+<footer class="vg-foot"><div class="vg-in"><div><a href="index.html"><img src="img/vagonto-logo.png" alt="Vagonto"></a>Vagonto AS · Oslo · Norway</div><div><a href="mailto:info@vagonto.com">info@vagonto.com</a><br><a href="tel:+4723910595">23 91 05 95</a></div><nav><a href="om-oss.html">Om oss</a><a href="bli-reiseskaper.html">Bli reiseskaper</a><a href="https://booking.vagonto.com/no/">Til bookingen</a></nav></div></footer>
+</body></html>

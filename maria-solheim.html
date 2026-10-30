@@ -1,0 +1,393 @@
+<!doctype html><html lang="no"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style>
+<title>Maria Solheim – reiseskaper | Vagonto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@700&family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --ground:#F1F3EE;--surface:#FFFFFF;--surface-2:#E4EAE3;--band:#E4EAE3;
+  --ink:#143528;--ink-soft:#4C6558;--ink-faint:#7C9186;
+  --line:#DDE4DB;--line-strong:#C2CFC2;
+  --accent:#143528;--accent-ink:#FFFFFF;--hot:#17698F;--hot-soft:#DFEFF9;
+  --shadow:0 1px 2px rgba(57,57,57,.06),0 10px 30px rgba(57,57,57,.10);--radius:6px;--brand:#2E9BD6;--btn:#17698F;--btn-ink:#FFFFFF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1712;--surface:#16241D;--surface-2:#22322A;--band:#22322A;
+    --ink:#E7EEE8;--ink-soft:#A3B6AA;--ink-faint:#7A8D82;
+    --line:#2C3A33;--line-strong:#3E4E45;
+    --accent:#2E9BD6;--accent-ink:#08222F;--hot:#6EC1EA;--hot-soft:#10303F;
+    --shadow:0 1px 2px rgba(0,0,0,.45),0 12px 34px rgba(0,0,0,.42);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1712;--surface:#16241D;--surface-2:#22322A;--band:#22322A;
+  --ink:#E7EEE8;--ink-soft:#A3B6AA;--ink-faint:#7A8D82;
+  --line:#2C3A33;--line-strong:#3E4E45;
+  --accent:#2E9BD6;--accent-ink:#08222F;--hot:#6EC1EA;--hot-soft:#10303F;
+  --shadow:0 1px 2px rgba(0,0,0,.45),0 12px 34px rgba(0,0,0,.42);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Poppins","Segoe UI",Helvetica,Arial,sans-serif;font-size:16.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Poppins",Helvetica,Arial,sans-serif;margin:0;line-height:1.06;letter-spacing:-.02em;text-wrap:balance}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+:focus-visible{outline:2px solid var(--hot);outline-offset:3px}
+.wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+.spacer{flex:1}
+
+header.top{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--band) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar{display:flex;align-items:center;gap:20px;height:74px}
+.brand{display:flex;align-items:center;flex:none;color:var(--ink)}
+.lock{--H:38px;--d:calc(var(--H)/4);display:flex;align-items:center;gap:var(--d);color:var(--ink)}
+.lock svg{width:var(--H);height:var(--H);display:block;flex:none}
+.lock .ordm{font-family:"Familjen Grotesk","Poppins",Helvetica,sans-serif;font-weight:700;letter-spacing:-.045em;line-height:1;font-size:calc(var(--H)*.62);color:var(--ink);white-space:nowrap}
+.lock .ordm span{color:var(--brand)}
+nav.main{display:flex;gap:20px;font-size:15px;color:var(--ink-soft)}
+nav.main a:hover{color:var(--ink)}
+.demo-chip{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);border:1px dashed var(--line-strong);padding:3px 8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;padding:11px 20px;font-weight:600;font-size:15px;border-radius:var(--radius);transition:transform .12s ease,background .15s ease,border-color .15s ease,color .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--btn);color:var(--btn-ink)}
+.btn-ghost{border:1px solid var(--line-strong)}
+.btn-ghost:hover{border-color:var(--hot);color:var(--hot)}
+
+/* profil */
+.profil{padding:48px 0 38px;border-bottom:1px solid var(--line)}
+.pgrid{display:grid;grid-template-columns:150px 1fr auto;gap:30px;align-items:start}
+.pfoto{width:150px;height:150px;border-radius:50%;overflow:hidden;box-shadow:0 0 0 4px var(--surface),0 0 0 5px var(--line);background:var(--surface-2)}
+.pfoto svg{width:100%;height:100%;display:block}
+.pnavn{font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.03em}
+.phandle{font-size:16px;color:var(--hot);font-weight:600;margin-top:4px}
+.pbio{font-size:17.5px;color:var(--ink-soft);max-width:62ch;margin:16px 0 0}
+.psted{display:inline-flex;align-items:center;gap:7px;font-size:14px;color:var(--ink-faint);margin-top:12px}
+.pkanaler{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.kanal{font-size:13px;padding:5px 11px;border:1px solid var(--line-strong);border-radius:99px;color:var(--ink-soft)}
+.ptall{display:grid;gap:14px;text-align:right}
+.ptall div b{display:block;font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.ptall div span{font-size:13.5px;color:var(--ink-faint)}
+
+/* om meg */
+.om{padding:42px 0;border-bottom:1px solid var(--line)}
+.om-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.om h2{font-size:23px;font-weight:700;margin-bottom:12px}
+.om p{margin:0 0 12px;color:var(--ink-soft);font-size:16.3px}
+.sitat{border-left:3px solid var(--hot);padding-left:18px;font-size:18.5px;line-height:1.45;color:var(--ink);font-weight:500}
+
+/* reiser */
+.section{padding:42px 0}
+.shode{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.shode h2{font-size:27px;font-weight:700;letter-spacing:-.02em}
+.shode span{font-size:14px;color:var(--ink-faint)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:24px}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--line-strong)}
+.poster{position:relative;aspect-ratio:3/4;overflow:hidden;background:#111}
+.poster svg,.poster img{width:100%;height:100%;display:block;object-fit:cover}
+.poster .land{position:absolute;left:0;right:0;bottom:0;padding:14px;font-weight:700;text-transform:uppercase;font-size:20px;color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.45);line-height:1.05}
+.poster .land small{display:block;font-weight:400;font-size:10.5px;letter-spacing:.16em;opacity:.85;margin-bottom:5px}
+.card-body{padding:15px 16px 17px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:19px;font-weight:700}
+.meta{font-size:11.5px;letter-spacing:.08em;color:var(--ink-faint);text-transform:uppercase}
+.teaser{font-size:14.5px;color:var(--ink-soft);line-height:1.45}
+.card-foot{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
+.from{font-size:13px;color:var(--ink-faint)}
+.from b{display:block;font-weight:700;font-size:18px;color:var(--ink);font-variant-numeric:tabular-nums}
+.go{font-size:14px;font-weight:600;color:var(--hot);white-space:nowrap}
+
+/* bunn-cta */
+.cta{background:var(--accent);color:var(--accent-ink);border-radius:var(--radius);padding:32px;display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;margin:20px 0 10px}
+.cta h2{font-size:26px;font-weight:700}
+.cta p{margin:9px 0 0;opacity:.85;max-width:60ch;font-size:15.6px}
+
+footer{border-top:1px solid var(--line);margin-top:40px;padding:30px 0 56px;color:var(--ink-faint);font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .pgrid{grid-template-columns:1fr}
+  .ptall{grid-template-columns:repeat(3,1fr);text-align:left;gap:10px}
+  .om-grid,.cta{grid-template-columns:1fr}
+  nav.main,.demo-chip{display:none}
+  .pfoto{width:110px;height:110px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* trygghetsstripe */
+.trygg{border-top:1px solid var(--line);background:var(--surface);margin-top:44px}
+.trygg-in{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;padding:26px 0}
+.trygg-in > div{display:flex;gap:12px;align-items:flex-start}
+.trygg-in svg{width:22px;height:22px;flex:none;color:var(--hot);margin-top:2px}
+.trygg-in b{display:block;font-size:15px;margin-bottom:3px}
+.trygg-in span{font-size:13.5px;color:var(--ink-soft);line-height:1.4}
+.trygg .mer{padding:0 0 22px;font-size:13.5px;color:var(--ink-faint)}
+.trygg .mer a{color:var(--hot);font-weight:600}
+@media (max-width:900px){.trygg-in{grid-template-columns:1fr 1fr;gap:18px}}
+@media (max-width:560px){.trygg-in{grid-template-columns:1fr}}
+</style>
+<meta name="description" content="Reiser satt sammen av Maria Solheim. Book dem som de er, eller gjør dem til dine egne.">
+<meta name="robots" content="noindex, nofollow"><!-- FJERNES VED LANSERING -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="chrome.css">
+</head>
+<body>
+<header class="vg-top"><div class="vg-in"><a class="vg-logo" href="index.html"><img src="img/vagonto-logo.png" alt="Vagonto"></a><nav class="vg-nav" aria-label="Hovedmeny"><a href="index.html">Forside</a><a href="reiseforslag.html">Reiseforslag</a><a href="smabyer.html">Småbyer</a><a href="montenegro.html">Montenegro</a><a href="pakk-reisen-selv.html">Pakk reisen selv</a><a href="bli-reiseskaper.html">Bli reiseskaper</a><a href="om-oss.html">Om oss</a></nav><a class="vg-cta" href="https://booking.vagonto.com/no/">Book en reise</a></div></header>
+<header data-old hidden style="display:none" class="top">
+  <div class="wrap topbar">
+    <a class="brand" id="brandLink" href="#" aria-label="Vagonto">
+      <span class="lock" style="--H:38px"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="15" cy="47" r="8" fill="none" stroke="currentColor" stroke-width="4.5"/><path d="M21.5 41.5 C29 38.5, 25.5 31.5, 33 30.5 C40 29.5, 38.5 24.5, 43.5 21.5" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><circle cx="49" cy="17" r="8" fill="var(--brand)"/></svg><span class="ordm">VAGONT<span>O</span></span></span>
+    </a>
+    <nav class="main">
+      <a id="forsideLink" href="#">Reiseforslag</a>
+      <a id="skaperLink2" href="#">Pakk reisen selv</a>
+    </nav>
+    <div class="spacer"></div>
+    <span class="demo-chip">Demo</span>
+    <a class="btn btn-primary" id="skaperLink" href="#">Pakk reisen selv!</a>
+  </div>
+</header>
+
+<main>
+<section class="profil">
+  <div class="wrap pgrid">
+    <div class="pfoto" id="pfoto"></div>
+    <div>
+      <div class="pnavn" id="pnavn"></div>
+      <div class="phandle" id="phandle"></div>
+      <p class="pbio" id="pbio"></p>
+      <div class="psted" id="psted"></div>
+      <div class="pkanaler" id="pkanaler"></div>
+    </div>
+    <div class="ptall" id="ptall"></div>
+  </div>
+</section>
+
+<section class="om">
+  <div class="wrap om-grid">
+    <div>
+      <h2>Litt om meg</h2>
+      <div id="omtekst"></div>
+    </div>
+    <div>
+      <h2>Sånn lager jeg reisene mine</h2>
+      <p class="sitat" id="sitat"></p>
+      <div id="omtekst2" style="margin-top:18px"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="shode">
+    <h2 id="reisertittel"></h2>
+    <span id="reisersub"></span>
+  </div>
+  <div class="grid" id="grid"></div>
+
+  <div class="cta">
+    <div>
+      <h2>Har du en tur du fortsatt snakker om?</h2>
+      <p>Sett den sammen som en reise andre kan kjøpe — eller finn på drømmereisen du har lyst på selv. Helt gratis, og du får din del hver gang noen kjøper den.</p>
+    </div>
+    <a class="btn btn-primary" id="skaperLink3" href="#">Pakk reisen selv!</a>
+  </div>
+</section>
+</main>
+
+<section class="trygg">
+  <div class="wrap trygg-in">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+      <span><b>Reisegaranti</b><span>Alle reiser er dekket av reisegaranti.</span></span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 19l2-5 8-3-1-2-8 2-4-5-2 1 2 5-3 1-2-2-1 1 3 4z"/></svg>
+      <span><b>IATA-billettering</b><span>Vi utsteder flybillettene selv, uten mellomledd.</span></span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h4l2 5-2.5 1.5a12 12 0 005 5L16 12l5 2v4a2 2 0 01-2 2A16 16 0 014 5a2 2 0 012-2z"/></svg>
+      <span><b>Kundeservice i Norge</b><span>Folk på norsk, før, under og etter reisen.</span></span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2"/></svg>
+      <span><b>Én bestilling</b><span>Fly, hotell og opplevelser i ett kjøp — vi ordner opp om noe skjer.</span></span></div>
+  </div>
+  <div class="wrap mer">Vagonto er et norsk reiseselskap. <a data-om href="#">Les om oss og folkene bak &rarr;</a></div>
+</section>
+
+<footer data-old hidden style="display:none">
+  <div class="wrap foot">
+    <div>
+      <div style="margin-bottom:9px"><span class="lock" style="--H:30px"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="15" cy="47" r="8" fill="none" stroke="currentColor" stroke-width="4.5"/><path d="M21.5 41.5 C29 38.5, 25.5 31.5, 33 30.5 C40 29.5, 38.5 24.5, 43.5 21.5" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><circle cx="49" cy="17" r="8" fill="var(--brand)"/></svg><span class="ordm">VAGONT<span>O</span></span></span></div>
+      Vagonto AS · Oslo · Norway
+    </div>
+    <div style="max-width:46ch">Prototype. Profilen og reisene er oppdiktede eksempler.</div>
+  </div>
+</footer>
+
+<script>
+/* Om-siden. I produksjon: /om-oss */
+const OM_URL="om-oss.html";
+document.addEventListener("DOMContentLoaded",()=>document.querySelectorAll("[data-om]").forEach(a=>{a.href=OM_URL;}));
+const FORSIDE="reiseforslag.html";
+const SKAPER="bli-reiseskaper.html";
+const HOME_URL="https://booking.vagonto.com/no/";
+
+/* === profildata — én fil per reiseskaper, eller hentet fra bruker-ID === */
+const P={
+  navn:"Maria Solheim",
+  handle:"@mariasol",
+  sted:"Bor i Stavanger, halve vinteren i Portugal",
+  frase:"Surfer, fotograf og altfor glad i lange frokoster",
+  intro:"Jeg lager reiser til Portugal, Marokko og hjemme på Jæren — for folk som vil surfe, spise godt og slippe å planlegge alt selv. Alle stedene har jeg bodd på selv.",
+  kanaler:["Instagram","YouTube","Bloggen surfdager.no"],
+  siden:"2019",
+  portrettSeed:8,
+  om:[
+    "Jeg dro til Ericeira første gang i 2019 for å surfe i ti dager, og ble i to måneder. Siden har jeg reist tilbake hver høst, og etter hvert begynt å ta med venner som aldri hadde stått på et brett før.",
+    "Det er egentlig derfor jeg lager reiser her. Jeg ble lei av å sende de samme meldingene om og om igjen — hvilket surfehus som er verdt pengene, hvilken strand nybegynnere skal styre unna, og hvor du får den frokosten som redder deg etter en økt i kaldt vann."
+  ],
+  om2:[
+    "Jeg legger bare ut steder jeg selv har bodd på, og jeg skriver hvorfor. Hvis et hotell ligger fint men har vegger av papp, står det i teksten.",
+    "Og jeg legger dem opp litt roligere enn folk tror de vil ha dem. Fire netter der andre legger inn to. Du husker uansett bare tre dager av turen — da kan de like gjerne være gode."
+  ],
+  sitat:"«Jeg legger alltid inn en dag uten planer. Det er som regel den folk snakker om når de kommer hjem.»",
+  reiser:[
+    {bilde:"img/forslag-06.webp",tittel:"Surf og yoga i Ericeira",land:"Portugal",dager:6,netter:5,pris:11900,kunst:"kyst",
+     teaser:"Surfeøkt om morgenen, yoga i skyggen etterpå, og de bakeriene som faktisk er verdt køen."},
+    {bilde:"img/maria-01.webp",tittel:"Algarve utenfor sesong",land:"Portugal",dager:7,netter:6,pris:9600,kunst:"kyst",
+     teaser:"Oktober, tomme strender og halv pris på husene. Leiebil og fem stopp langs kysten."},
+    {bilde:"img/maria-02.webp",tittel:"Nybegynnerhelg på Jæren",land:"Norge",dager:3,netter:2,pris:4200,kunst:"nord",
+     teaser:"For deg som vil prøve før du drar langt. Våtdrakt, brett og en instruktør som ikke gir seg."},
+    {bilde:"img/maria-03.webp",tittel:"Marokko: surf og souker",land:"Marokko",dager:8,netter:7,pris:13800,kunst:"orken",
+     teaser:"Taghazout i en uke, med to netter i Marrakech på slutten fordi det er verdt omveien."}
+  ]
+};
+
+const PALETT={
+  ruiner:{sky:"#E2703A",sky2:"#F2B366",sun:"#FCE8C0",l1:"#B4553A",l2:"#7E3B2E",l3:"#3B2320",kind:"peaks"},
+  oy:{sky:"#2E9EA8",sky2:"#9BD9D6",sun:"#FBE3A8",l1:"#1E7A88",l2:"#14515F",l3:"#0C3040",kind:"island"},
+  fjell:{sky:"#38678C",sky2:"#A8C8DC",sun:"#F6EBD2",l1:"#5C87A6",l2:"#2E4E6C",l3:"#16293C",kind:"peaks"},
+  orken:{sky:"#DE8B3C",sky2:"#F6D6A4",sun:"#FFF0CB",l1:"#C4763C",l2:"#93502F",l3:"#5C2F22",kind:"dunes"},
+  by:{sky:"#D8604F",sky2:"#F4C79C",sun:"#FBE7C4",l1:"#8E4152",l2:"#4B2A45",l3:"#241A33",kind:"city"},
+  kyst:{sky:"#1F8FA6",sky2:"#8FCFD8",sun:"#FCEBBE",l1:"#177A90",l2:"#0F5468",l3:"#0A3244",kind:"island"},
+  vin:{sky:"#B0616C",sky2:"#EBC7B4",sun:"#F9E2C3",l1:"#8A4A57",l2:"#5F3140",l3:"#361E2A",kind:"dunes"},
+  nord:{sky:"#123244",sky2:"#2B5C6B",sun:"#7FE2BE",l1:"#12414E",l2:"#0C2A36",l3:"#061820",kind:"peaks"},
+  jungel:{sky:"#3E8A63",sky2:"#B7D9A8",sun:"#F7EFC4",l1:"#2F6E4E",l2:"#1F4D38",l3:"#122E23",kind:"peaks"}
+};
+
+function plakat(key,seed){
+  const p=PALETT[key]||PALETT.fjell;
+  const gid="sky"+key+seed, nid="n"+key+seed;
+  const rnd=n=>{const x=Math.sin(seed*53+n*17.3)*10000;return x-Math.floor(x);};
+  let art="";
+  if(p.kind==="peaks"){
+    [[p.l1,64,30],[p.l2,78,24],[p.l3,92,17]].forEach(([c,base,h],i)=>{
+      let d=`M0 ${base+10}`;
+      for(let s=0;s<=4;s++){
+        const x=s*22, y=base-h*(0.5+rnd(i*5+s)*0.8);
+        d+=` L${x-11} ${base+6} L${x} ${y}`;
+      }
+      d+=` L92 ${base+8} L92 132 L0 132 Z`;
+      art+=`<path d="${d}" fill="${c}"/>`;
+    });
+  }else if(p.kind==="island"){
+    art+=`<path d="M0 74 C 18 68, 30 80, 46 74 S 74 66, 88 74 L88 132 L0 132 Z" fill="${p.l1}"/>`;
+    art+=`<ellipse cx="${28+rnd(1)*22}" cy="72" rx="21" ry="7.5" fill="${p.sun}" opacity=".75"/>`;
+    art+=`<path d="M0 88 C 20 82, 34 95, 52 88 S 76 80, 88 88 L88 132 L0 132 Z" fill="${p.l2}"/>`;
+    art+=`<path d="M0 104 C 22 98, 38 110, 58 103 S 78 96, 88 103 L88 132 L0 132 Z" fill="${p.l3}"/>`;
+    const px=62+rnd(3)*12;
+    art+=`<path d="M${px} 74 L${px-1.6} 50" stroke="${p.l3}" stroke-width="1.8" fill="none"/>`;
+    art+=`<path d="M${px-1.6} 50 C ${px-13} 46, ${px-16} 52, ${px-17} 56 C ${px-13} 50, ${px-7} 49, ${px-1.6} 50z" fill="${p.l3}"/>`;
+    art+=`<path d="M${px-1.6} 50 C ${px+9} 45, ${px+14} 51, ${px+16} 55 C ${px+11} 49, ${px+5} 48, ${px-1.6} 50z" fill="${p.l3}"/>`;
+    art+=`<path d="M${px-1.6} 50 C ${px-6} 41, ${px+2} 38, ${px+7} 38 C ${px+1} 41, ${px-1} 45, ${px-1.6} 50z" fill="${p.l3}"/>`;
+  }else if(p.kind==="dunes"){
+    [[p.l1,68],[p.l2,84],[p.l3,100]].forEach(([c,base],i)=>{
+      art+=`<path d="M0 ${base+4} C 16 ${base-10-rnd(i)*8}, 40 ${base+10}, 58 ${base-2} S 78 ${base-11}, 92 ${base+1} L92 132 L0 132 Z" fill="${c}"/>`;
+    });
+  }else{
+    art+=`<path d="M0 96 L92 96 L92 132 L0 132 Z" fill="${p.l3}"/>`;
+    for(let i=0;i<11;i++){
+      const w=5.5+rnd(i)*5.5, x=i*8.4-3, h=18+rnd(i+9)*40, c=[p.l1,p.l2,p.l3][i%3];
+      art+=`<rect x="${x}" y="${96-h}" width="${w}" height="${h}" fill="${c}"/>`;
+      for(let k=0;k<Math.floor(h/10);k++){
+        art+=`<rect x="${x+1.5}" y="${96-h+5+k*9}" width="${w-3}" height="2.2" fill="${p.sun}" opacity="${.18+rnd(i+k)*.35}"/>`;
+      }
+    }
+  }
+  return `<svg viewBox="0 0 92 132" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="${p.sky}"/><stop offset="72%" stop-color="${p.sky2}"/>
+      </linearGradient>
+      <filter id="${nid}"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3"/><feColorMatrix type="saturate" values="0"/></filter>
+    </defs>
+    <rect width="92" height="132" fill="url(#${gid})"/>
+    <circle cx="${26+seed%40}" cy="${34+seed%12}" r="13" fill="${p.sun}" opacity=".9"/>
+    ${art}
+    <rect width="92" height="132" filter="url(#${nid})" opacity=".07"/>
+    <rect x="4" y="4" width="84" height="124" fill="none" stroke="#fff" stroke-width="0.5" opacity=".28"/>
+  </svg>`;
+}
+
+const HUD=["#F3CBA9","#E3AC80","#C98A5A","#9C6238","#7A4A28","#F8DFC6"];
+const HAAR=["#2A2422","#4E3524","#8C5A2B","#C9A24B","#7E7E7E","#3B2C6B","#B34A3A"];
+const TROYE=["#2947CC","#E11B1B","#3F8F6E","#DA7B2C","#6B5AA8","#2F2F33","#1E7A88"];
+const BAK=["#EBD9D9","#DCE4FB","#E2F0E7","#FBEBD9","#EFE1F5","#E1EEF2"];
+function portrett(seed){
+  const r=n=>{const x=Math.sin(seed*37.3+n*11.7)*10000;return x-Math.floor(x);};
+  const hud=HUD[Math.floor(r(1)*HUD.length)], haar=HAAR[Math.floor(r(2)*HAAR.length)];
+  const troye=TROYE[Math.floor(r(3)*TROYE.length)], bak=BAK[Math.floor(r(4)*BAK.length)];
+  const v=Math.floor(r(5)*5), id="p"+seed;
+  let hair="";
+  if(v===0) hair=`<path d="M18 27 C18 13, 46 13, 46 27 C42 20, 22 20, 18 27z" fill="${haar}"/>`;
+  else if(v===1) hair=`<path d="M17 46 C13 30, 16 12, 32 12 C48 12, 51 30, 47 46 L41 46 C45 32, 44 18, 32 18 C20 18, 19 32, 23 46 z" fill="${haar}"/>`;
+  else if(v===2) hair=`<circle cx="32" cy="9" r="6" fill="${haar}"/><path d="M18 27 C18 13, 46 13, 46 27 C42 20, 22 20, 18 27z" fill="${haar}"/>`;
+  else if(v===3) hair=`<circle cx="23" cy="18" r="8" fill="${haar}"/><circle cx="32" cy="14" r="9" fill="${haar}"/><circle cx="41" cy="18" r="8" fill="${haar}"/>`;
+  else hair=`<path d="M17 25 C17 13, 47 13, 47 25 z" fill="${haar}"/><rect x="15" y="23" width="34" height="5" rx="2.5" fill="rgba(0,0,0,.25)"/>`;
+  return `<svg viewBox="0 0 64 64" aria-hidden="true">
+    <defs><clipPath id="${id}"><circle cx="32" cy="32" r="32"/></clipPath></defs>
+    <g clip-path="url(#${id})">
+      <rect width="64" height="64" fill="${bak}"/>
+      ${v===1?hair:""}
+      <path d="M7 64 C9 50, 21 43, 32 43 C43 43, 55 50, 57 64 Z" fill="${troye}"/>
+      <rect x="27" y="34" width="10" height="11" rx="4" fill="${hud}" opacity=".85"/>
+      <circle cx="19" cy="28" r="3" fill="${hud}"/><circle cx="45" cy="28" r="3" fill="${hud}"/>
+      <ellipse cx="32" cy="27" rx="13" ry="15" fill="${hud}"/>
+      ${v===1?"":hair}
+      <circle cx="27" cy="28" r="1.6" fill="#2A2523"/><circle cx="37" cy="28" r="1.6" fill="#2A2523"/>
+      <path d="M29 34 q3 2.6 6 0" stroke="#2A2523" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    </g></svg>`;
+}
+
+const kr=n=>n.toLocaleString("nb-NO").replace(/ /g," ");
+
+document.getElementById("pfoto").innerHTML=portrett(P.portrettSeed);
+document.getElementById("pnavn").textContent=P.navn;
+document.getElementById("phandle").textContent=P.handle+" · "+P.frase;
+document.getElementById("pbio").textContent=P.intro;
+document.getElementById("psted").innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-5.6 7-11a7 7 0 10-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>'+P.sted;
+document.getElementById("pkanaler").innerHTML=P.kanaler.map(k=>`<span class="kanal">${k}</span>`).join("");
+const land=[...new Set(P.reiser.map(r=>r.land))].length;
+document.getElementById("ptall").innerHTML=`
+  <div><b>${P.reiser.length}</b><span>reiser ute nå</span></div>
+  <div><b>${land}</b><span>land</span></div>
+  <div><b>${P.siden}</b><span>reiseskaper siden</span></div>`;
+document.getElementById("omtekst").innerHTML=P.om.map(t=>`<p>${t}</p>`).join("");
+document.getElementById("omtekst2").innerHTML=P.om2.map(t=>`<p>${t}</p>`).join("");
+document.getElementById("sitat").textContent=P.sitat;
+document.getElementById("reisertittel").textContent="Reisene til "+P.navn.split(" ")[0];
+document.getElementById("reisersub").textContent=`${P.reiser.length} reiser du kan booke akkurat som de er — eller tilpasse med dine egne datoer`;
+
+document.getElementById("grid").innerHTML=P.reiser.map((r,i)=>`
+  <a class="card" href="${r.url||HOME_URL}" target="_blank" rel="noopener">
+    <div class="poster">${r.bilde?`<img src="${r.bilde}" alt="${r.tittel}" loading="lazy">`:plakat(r.kunst,(i+3)*17)}
+      <div class="land"><small>${r.dager} DAGER / ${r.netter} NETTER</small>${r.land}</div></div>
+    <div class="card-body">
+      <div class="meta">Laget av ${P.handle}</div>
+      <h3>${r.tittel}</h3>
+      <p class="teaser">${r.teaser}</p>
+      <div class="card-foot"><span class="from">fra<b>${kr(r.pris)} kr</b></span><span class="go">Se reisen ↗</span></div>
+    </div></a>`).join("");
+
+document.getElementById("brandLink").href=FORSIDE;
+document.getElementById("forsideLink").href=FORSIDE;
+["skaperLink","skaperLink2","skaperLink3"].forEach(id=>{const a=document.getElementById(id);a.href=SKAPER;});
+</script>
+
+
+<footer class="vg-foot"><div class="vg-in"><div><a href="index.html"><img src="img/vagonto-logo.png" alt="Vagonto"></a>Vagonto AS · Oslo · Norway</div><div><a href="mailto:info@vagonto.com">info@vagonto.com</a><br><a href="tel:+4723910595">23 91 05 95</a></div><nav><a href="om-oss.html">Om oss</a><a href="bli-reiseskaper.html">Bli reiseskaper</a><a href="https://booking.vagonto.com/no/">Til bookingen</a></nav></div></footer>
+</body></html>

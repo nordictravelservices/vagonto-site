@@ -1,0 +1,292 @@
+<!doctype html><html lang="no"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style>
+<title>Om Vagonto – folkene og navnet bak reisene</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@700&family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --ground:#F1F3EE;--surface:#FFFFFF;--surface-2:#E4EAE3;--band:#E4EAE3;
+  --ink:#143528;--ink-soft:#4C6558;--ink-faint:#7C9186;
+  --line:#DDE4DB;--line-strong:#C2CFC2;
+  --accent:#143528;--accent-ink:#FFFFFF;--hot:#17698F;--hot-soft:#DFEFF9;
+  --shadow:0 1px 2px rgba(57,57,57,.06),0 10px 30px rgba(57,57,57,.10);--radius:6px;--brand:#2E9BD6;--btn:#17698F;--btn-ink:#FFFFFF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1712;--surface:#16241D;--surface-2:#22322A;--band:#22322A;
+    --ink:#E7EEE8;--ink-soft:#A3B6AA;--ink-faint:#7A8D82;
+    --line:#2C3A33;--line-strong:#3E4E45;
+    --accent:#2E9BD6;--accent-ink:#08222F;--hot:#6EC1EA;--hot-soft:#10303F;
+    --shadow:0 1px 2px rgba(0,0,0,.45),0 12px 34px rgba(0,0,0,.42);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1712;--surface:#16241D;--surface-2:#22322A;--band:#22322A;
+  --ink:#E7EEE8;--ink-soft:#A3B6AA;--ink-faint:#7A8D82;
+  --line:#2C3A33;--line-strong:#3E4E45;
+  --accent:#2E9BD6;--accent-ink:#08222F;--hot:#6EC1EA;--hot-soft:#10303F;
+  --shadow:0 1px 2px rgba(0,0,0,.45),0 12px 34px rgba(0,0,0,.42);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Poppins","Segoe UI",Helvetica,Arial,sans-serif;font-size:16.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Poppins",Helvetica,Arial,sans-serif;margin:0;line-height:1.06;letter-spacing:-.02em;text-wrap:balance}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+:focus-visible{outline:2px solid var(--hot);outline-offset:3px}
+.wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+.spacer{flex:1}
+
+header.top{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--band) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar{display:flex;align-items:center;gap:20px;height:74px}
+.brand{display:flex;align-items:center;flex:none;color:var(--ink)}
+.lock{--H:38px;--d:calc(var(--H)/4);display:flex;align-items:center;gap:var(--d);color:var(--ink)}
+.lock svg{width:var(--H);height:var(--H);display:block;flex:none}
+.lock .ordm{font-family:"Familjen Grotesk","Poppins",Helvetica,sans-serif;font-weight:700;letter-spacing:-.045em;line-height:1;font-size:calc(var(--H)*.62);color:var(--ink);white-space:nowrap}
+.lock .ordm span{color:var(--brand)}
+nav.main{display:flex;gap:20px;font-size:15px;color:var(--ink-soft)}
+nav.main a:hover{color:var(--ink)}
+.demo-chip{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);border:1px dashed var(--line-strong);padding:3px 8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;font-weight:600;font-size:15px;border-radius:var(--radius);transition:transform .12s ease,background .15s ease,border-color .15s ease,color .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--btn);color:var(--btn-ink)}
+.btn-ghost{border:1px solid var(--line-strong)}
+.btn-ghost:hover{border-color:var(--hot);color:var(--hot)}
+
+/* profil */
+.profil{padding:48px 0 38px;border-bottom:1px solid var(--line)}
+.pgrid{display:grid;grid-template-columns:150px 1fr auto;gap:30px;align-items:start}
+.pfoto{width:150px;height:150px;border-radius:50%;overflow:hidden;box-shadow:0 0 0 4px var(--surface),0 0 0 5px var(--line);background:var(--surface-2)}
+.pfoto svg{width:100%;height:100%;display:block}
+.pnavn{font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.03em}
+.phandle{font-size:16px;color:var(--hot);font-weight:600;margin-top:4px}
+.pbio{font-size:17.5px;color:var(--ink-soft);max-width:62ch;margin:16px 0 0}
+.psted{display:inline-flex;align-items:center;gap:7px;font-size:14px;color:var(--ink-faint);margin-top:12px}
+.pkanaler{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.kanal{font-size:13px;padding:5px 11px;border:1px solid var(--line-strong);border-radius:99px;color:var(--ink-soft)}
+.ptall{display:grid;gap:14px;text-align:right}
+.ptall div b{display:block;font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.ptall div span{font-size:13.5px;color:var(--ink-faint)}
+
+/* om meg */
+.om{padding:42px 0;border-bottom:1px solid var(--line)}
+.om-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.om h2{font-size:23px;font-weight:700;margin-bottom:12px}
+.om p{margin:0 0 12px;color:var(--ink-soft);font-size:16.3px}
+.sitat{border-left:3px solid var(--hot);padding-left:18px;font-size:18.5px;line-height:1.45;color:var(--ink);font-weight:500}
+
+/* reiser */
+.section{padding:42px 0}
+.shode{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.shode h2{font-size:27px;font-weight:700;letter-spacing:-.02em}
+.shode span{font-size:14px;color:var(--ink-faint)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:24px}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--line-strong)}
+.poster{position:relative;aspect-ratio:3/4;overflow:hidden;background:#111}
+.poster svg,.poster img{width:100%;height:100%;display:block;object-fit:cover}
+.poster .land{position:absolute;left:0;right:0;bottom:0;padding:14px;font-weight:700;text-transform:uppercase;font-size:20px;color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.45);line-height:1.05}
+.poster .land small{display:block;font-weight:400;font-size:10.5px;letter-spacing:.16em;opacity:.85;margin-bottom:5px}
+.card-body{padding:15px 16px 17px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:19px;font-weight:700}
+.meta{font-size:11.5px;letter-spacing:.08em;color:var(--ink-faint);text-transform:uppercase}
+.teaser{font-size:14.5px;color:var(--ink-soft);line-height:1.45}
+.card-foot{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
+.from{font-size:13px;color:var(--ink-faint)}
+.from b{display:block;font-weight:700;font-size:18px;color:var(--ink);font-variant-numeric:tabular-nums}
+.go{font-size:14px;font-weight:600;color:var(--hot);white-space:nowrap}
+
+/* bunn-cta */
+.cta{background:var(--accent);color:var(--accent-ink);border-radius:var(--radius);padding:32px;display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;margin:20px 0 10px}
+.cta h2{font-size:26px;font-weight:700}
+.cta p{margin:9px 0 0;opacity:.85;max-width:60ch;font-size:15.6px}
+
+footer{border-top:1px solid var(--line);margin-top:40px;padding:30px 0 56px;color:var(--ink-faint);font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .pgrid{grid-template-columns:1fr}
+  .ptall{grid-template-columns:repeat(3,1fr);text-align:left;gap:10px}
+  .om-grid,.cta{grid-template-columns:1fr}
+  nav.main,.demo-chip{display:none}
+  .pfoto{width:110px;height:110px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.tkort{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.tkort svg{width:26px;height:26px;color:var(--hot);display:block;margin-bottom:12px}
+.tkort b{display:block;font-size:17px;margin-bottom:7px}
+.tkort p{margin:0;font-size:14.8px;color:var(--ink-soft)}
+.card{align-items:stretch}
+</style>
+<meta name="description" content="Vagonto er et norsk reiseselskap der du setter sammen fly, hotell og opplevelser selv, og booker alt i én bestilling.">
+<meta name="robots" content="noindex, nofollow"><!-- FJERNES VED LANSERING -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="chrome.css">
+</head>
+<body>
+<header class="vg-top"><div class="vg-in"><a class="vg-logo" href="index.html"><img src="img/vagonto-logo.png" alt="Vagonto"></a><nav class="vg-nav" aria-label="Hovedmeny"><a href="index.html">Forside</a><a href="reiseforslag.html">Reiseforslag</a><a href="smabyer.html">Småbyer</a><a href="montenegro.html">Montenegro</a><a href="pakk-reisen-selv.html">Pakk reisen selv</a><a href="bli-reiseskaper.html">Bli reiseskaper</a><a href="om-oss.html" aria-current="page">Om oss</a></nav><a class="vg-cta" href="https://booking.vagonto.com/no/">Book en reise</a></div></header>
+<header data-old hidden style="display:none" class="top">
+  <div class="wrap topbar">
+    <a class="brand" id="brandLink" href="#" aria-label="Vagonto">
+      <span class="lock" style="--H:38px"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="15" cy="47" r="8" fill="none" stroke="currentColor" stroke-width="4.5"/><path d="M21.5 41.5 C29 38.5, 25.5 31.5, 33 30.5 C40 29.5, 38.5 24.5, 43.5 21.5" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><circle cx="49" cy="17" r="8" fill="var(--brand)"/></svg><span class="ordm">VAGONT<span>O</span></span></span>
+    </a>
+    <nav class="main">
+      <a id="forsideLink" href="#">Reiseforslag</a>
+      <a href="#navnet">Navnet</a>
+      <a href="#folkene">Folkene</a>
+      <a href="#trygghet">Trygghet</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="spacer"></div>
+    <span class="demo-chip">Demo</span>
+    <a class="btn btn-primary" id="skaperLink" href="#">Pakk reisen selv!</a>
+  </div>
+</header>
+
+<main>
+<section class="profil" style="border-bottom:1px solid var(--line)">
+  <div class="wrap" style="max-width:none">
+    <div class="kicker" style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--hot);margin-bottom:12px">Om oss</div>
+    <h1 style="font-size:clamp(32px,4.6vw,54px);font-weight:800;letter-spacing:-.03em;max-width:20ch">Vi selger reiser folk faktisk har vært på.</h1>
+    <p style="font-size:19px;color:var(--ink-soft);max-width:62ch;margin:20px 0 0">Vagonto er et norsk reiseselskap. Vi setter sammen og selger reiser — fly, hotell, transport og opplevelser i én bestilling, laget for deg som skal reise, ikke kjøpt inn på forhånd.</p>
+    <p style="font-size:17px;color:var(--ink-soft);max-width:62ch;margin:14px 0 0">Det nye er hvem som lager reisene. I stedet for at et byrå bestemmer hva som skal selges, kan alle som er glad i å reise sette sammen sin egen reise hos oss, legge den ut under eget navn — og tjene på den hver gang noen booker.</p>
+  </div>
+</section>
+
+
+<section class="section wrap" id="navnet" style="padding-top:6px">
+  <div class="shode"><h2>Hva betyr Vagonto?</h2><span>Navnet er hentet fra esperanto</span></div>
+  <div class="om-grid">
+    <div>
+      <p>Esperanto ble laget i 1887 for å bringe mennesker sammen på tvers av landegrenser og kulturer.</p>
+      <p>Roten <b>vagi</b> betyr å vandre, utforske eller streife fritt rundt uten et fastlåst mål. Endelsen <b>-onto</b> beskriver en som står på terskelen til å gjøre noe — en som er i ferd med å starte.</p>
+      <p class="sitat">Vagonto: en som er i ferd med å legge ut på en vandring.</p>
+      <p>Det er navnet på følelsen du har i magen rett før du skal oppdage et nytt sted.</p>
+    </div>
+    <div>
+      <h3 style="font-size:19px;font-weight:700;margin:0 0 9px">Laget for å bygge broer</h3>
+      <p>Esperanto ble skapt ved å ta de mest logiske byggeklossene fra eksisterende språk og sette dem sammen til noe helt nytt og enkelt. Vi har bygd Vagonto med nøyaktig samme tankegang.</p>
+      <h3 style="font-size:19px;font-weight:700;margin:22px 0 9px">Sett sammen din egen reise</h3>
+      <p>Vi gir deg byggeklossene — de beste flyrutene, de fineste stedene å bo og opplevelsene få vet om — og lar deg sette dem sammen selv.</p>
+      <p>Start med en ferdig reise og gjør den til din egen, eller bygg fra første natt. Reisen settes sammen bit for bit, til den passer din egen vandrelyst.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="folkene">
+  <div class="shode"><h2>Folkene</h2><span>Teamet bak Vagonto</span></div>
+  <div class="grid" id="teamGrid" style="grid-template-columns:repeat(auto-fill,minmax(230px,1fr))"></div>
+</section>
+
+<section class="section wrap" id="trygghet" style="padding-top:10px">
+  <div class="shode"><h2>Trygt å kjøpe hos oss</h2><span>Det som gjelder for hver eneste bestilling</span></div>
+  <div class="tgrid" id="tgrid"></div>
+</section>
+
+<section class="section wrap" id="kontakt">
+  <div class="cta">
+    <div>
+      <h2>Snakk med oss</h2>
+      <p>Vi svarer på norsk, og du får tak i et menneske. Ring eller send e-post — eller ta kontakt hvis du vil at vi setter sammen reisen for deg.</p>
+      <p style="margin-top:12px;font-weight:600;opacity:1">23 91 05 95 · info@vagonto.com</p>
+    </div>
+    <a class="btn btn-primary" id="skaperLink3" href="#">Pakk reisen selv!</a>
+  </div>
+</section>
+</main>
+
+<footer data-old hidden style="display:none">
+  <div class="wrap foot">
+    <div>
+      <div style="margin-bottom:9px"><span class="lock" style="--H:30px"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="15" cy="47" r="8" fill="none" stroke="currentColor" stroke-width="4.5"/><path d="M21.5 41.5 C29 38.5, 25.5 31.5, 33 30.5 C40 29.5, 38.5 24.5, 43.5 21.5" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><circle cx="49" cy="17" r="8" fill="var(--brand)"/></svg><span class="ordm">VAGONT<span>O</span></span></span></div>
+      Vagonto AS · Oslo · Norway
+    </div>
+    <div style="max-width:46ch">Prototype. Portrettene er illustrasjoner, ikke fotografier.</div>
+  </div>
+</footer>
+
+<script>
+const FORSIDE="reiseforslag.html";
+const SKAPER="pakk-reisen-selv.html";
+
+/* === teamet — fyll inn riktige roller og tekster === */
+const TEAM=[
+ {navn:"Görgen", kjonn:"m", seed:3},
+ {navn:"Farooq", kjonn:"m", seed:11},
+ {navn:"Alvi", kjonn:"m", seed:27},
+ {navn:"Talia", kjonn:"k", seed:35},
+ {navn:"Hasan", kjonn:"m", seed:43}
+];
+
+const TRYGGHET=[
+ {t:"Reisegaranti", d:"Alle reiser er dekket av reisegaranti. Pengene dine er sikret hvis noe skulle skje med oss.", i:"skjold"},
+ {t:"IATA-billettering", d:"Vi utsteder flybillettene selv som IATA-godkjent agent — ikke via mellomledd. Det gjør ombooking og endringer raskere.", i:"fly"},
+ {t:"Kundeservice i Norge", d:"Du snakker med folk i Norge, på norsk, før, under og etter reisen. Ett nummer for hele reisen.", i:"telefon"},
+ {t:"Én bestilling", d:"Fly, hotell, transport og opplevelser i samme kjøp. Blir noe forsinket eller kansellert, er det vi som ordner opp.", i:"koffert"}
+];
+
+const HUD=["#F3CBA9","#E3AC80","#C98A5A","#9C6238","#7A4A28","#F8DFC6"];
+const HAAR=["#2A2422","#4E3524","#8C5A2B","#C9A24B","#7E7E7E","#3B2C6B","#B34A3A"];
+const TROYE=["#2947CC","#E11B1B","#3F8F6E","#DA7B2C","#6B5AA8","#2F2F33","#1E7A88"];
+const BAK=["#EBD9D9","#DCE4FB","#E2F0E7","#FBEBD9","#EFE1F5","#E1EEF2"];
+function portrett(seed,kjonn){
+  const r=n=>{const x=Math.sin(seed*37.3+n*11.7)*10000;return x-Math.floor(x);};
+  const hud=HUD[Math.floor(r(1)*HUD.length)], haar=HAAR[Math.floor(r(2)*HAAR.length)];
+  const troye=TROYE[Math.floor(r(3)*TROYE.length)], bak=BAK[Math.floor(r(4)*BAK.length)];
+  let v=Math.floor(r(5)*5);
+  if(kjonn==="m"){const m=[0,3,4]; v=m[Math.floor(r(6)*m.length)];}
+  if(kjonn==="k"){const k=[1,2]; v=k[Math.floor(r(6)*k.length)];}
+  const id="p"+seed;
+  let hair="";
+  if(v===0) hair=`<path d="M18 27 C18 13, 46 13, 46 27 C42 20, 22 20, 18 27z" fill="${haar}"/>`;
+  else if(v===1) hair=`<path d="M17 46 C13 30, 16 12, 32 12 C48 12, 51 30, 47 46 L41 46 C45 32, 44 18, 32 18 C20 18, 19 32, 23 46 z" fill="${haar}"/>`;
+  else if(v===2) hair=`<circle cx="32" cy="9" r="6" fill="${haar}"/><path d="M18 27 C18 13, 46 13, 46 27 C42 20, 22 20, 18 27z" fill="${haar}"/>`;
+  else if(v===3) hair=`<circle cx="23" cy="18" r="8" fill="${haar}"/><circle cx="32" cy="14" r="9" fill="${haar}"/><circle cx="41" cy="18" r="8" fill="${haar}"/>`;
+  else hair=`<path d="M17 25 C17 13, 47 13, 47 25 z" fill="${haar}"/><rect x="15" y="23" width="34" height="5" rx="2.5" fill="rgba(0,0,0,.25)"/>`;
+  return `<svg viewBox="0 0 64 64" aria-hidden="true">
+    <defs><clipPath id="${id}"><circle cx="32" cy="32" r="32"/></clipPath></defs>
+    <g clip-path="url(#${id})">
+      <rect width="64" height="64" fill="${bak}"/>
+      ${v===1?hair:""}
+      <path d="M7 64 C9 50, 21 43, 32 43 C43 43, 55 50, 57 64 Z" fill="${troye}"/>
+      <rect x="27" y="34" width="10" height="11" rx="4" fill="${hud}" opacity=".85"/>
+      <circle cx="19" cy="28" r="3" fill="${hud}"/><circle cx="45" cy="28" r="3" fill="${hud}"/>
+      <ellipse cx="32" cy="27" rx="13" ry="15" fill="${hud}"/>
+      ${v===1?"":hair}
+      <circle cx="27" cy="28" r="1.6" fill="#2A2523"/><circle cx="37" cy="28" r="1.6" fill="#2A2523"/>
+      <path d="M29 34 q3 2.6 6 0" stroke="#2A2523" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    </g></svg>`;
+}
+
+
+const IKON={
+ skjold:'<path d="M12 3l7 3v6c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/>',
+ fly:'<path d="M10 19l2-5 8-3-1-2-8 2-4-5-2 1 2 5-3 1-2-2-1 1 3 4z"/>',
+ telefon:'<path d="M6 3h4l2 5-2.5 1.5a12 12 0 005 5L16 12l5 2v4a2 2 0 01-2 2A16 16 0 014 5a2 2 0 012-2z"/>',
+ koffert:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2"/>'
+};
+
+document.getElementById("teamGrid").innerHTML=TEAM.map(p=>`
+  <div class="card" style="padding:20px;align-items:center;text-align:center">
+    <div style="width:96px;height:96px;border-radius:50%;overflow:hidden;margin-bottom:14px;box-shadow:0 0 0 3px var(--surface),0 0 0 4px var(--line)">${portrett(p.seed,p.kjonn)}</div>
+    <h3 style="font-size:18px">${p.navn}</h3>
+  </div>`).join("");
+
+document.getElementById("tgrid").innerHTML=TRYGGHET.map(t=>`
+  <div class="tkort">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${IKON[t.i]}</svg>
+    <b>${t.t}</b>
+    <p>${t.d}</p>
+  </div>`).join("");
+
+document.getElementById("brandLink").href=FORSIDE;
+document.getElementById("forsideLink").href=FORSIDE;
+["skaperLink","skaperLink3"].forEach(id=>{const a=document.getElementById(id);if(a)a.href=SKAPER;});
+</script>
+
+
+<footer class="vg-foot"><div class="vg-in"><div><a href="index.html"><img src="img/vagonto-logo.png" alt="Vagonto"></a>Vagonto AS · Oslo · Norway</div><div><a href="mailto:info@vagonto.com">info@vagonto.com</a><br><a href="tel:+4723910595">23 91 05 95</a></div><nav><a href="om-oss.html">Om oss</a><a href="bli-reiseskaper.html">Bli reiseskaper</a><a href="https://booking.vagonto.com/no/">Til bookingen</a></nav></div></footer>
+</body></html>

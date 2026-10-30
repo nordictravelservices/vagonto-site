@@ -10,15 +10,26 @@ satt som standarddomene på Airticket Collective-micrositen).
 
 | Fil | Innhold |
 |---|---|
-| `index.html` | Forsiden («Din reise, satt sammen av deg») |
+| `index.html` | Forsiden fra oktober («Din reise, satt sammen av deg») |
+| `reiseforslag.html` | Første forside fra september (reiseskapere og reisekort) |
+| `smabyer.html` | Småbyer |
 | `montenegro.html` | Destinasjonsside Montenegro |
-| `arsenal.html` | Landingsside Arsenal hjemmekamper (demo – kun Everton-pakken er live) |
-| `site.css` | Felles stilark (farger, typografi, header, kort, footer) |
+| `pakk-reisen-selv.html` | Slik pakker du reisen selv |
+| `bli-reiseskaper.html` | Rekruttering av reiseskapere |
+| `maria-solheim.html` | Eksempel på profilside for en reiseskaper |
+| `om-oss.html` | Om Vagonto, navnet, folkene, kontakt |
+| `reisehjelp.html` | KI-chat (virker ikke uten KI-tjeneste bak) – ikke i menyen |
+| `arsenal.html` | Arsenal hjemmekamper (demo) – ikke i menyen |
+| `sider.html` | Arbeidsoversikt over alle sidene – ikke i menyen |
+| `site.css` | Stilark for forside og Montenegro |
+| `chrome.css` | Felles meny og bunnlinje for alle sider (klasser med `vg-`) |
+| `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` | Rutemerket, samme som på booking.vagonto.com |
 | `img/` | Bilder. `vagonto-logo.png` er logoen |
 
-Rene statiske filer – ingen byggesteg, ingen rammeverk. Hver side er én
-HTML-fil som lenker `site.css`; sidespesifikk CSS ligger i en `<style>`-blokk
-i den aktuelle siden.
+Rene statiske filer – ingen byggesteg, ingen rammeverk. De eldre sidene har
+sin egen CSS inline; den gamle toppen og bunnen deres er skjult (beholdt
+fordi sidenes skript bruker elementene) og erstattet med felles meny og
+bunnlinje fra `chrome.css`.
 
 ## Lenker til bookingmotoren
 

@@ -1,0 +1,357 @@
+<!doctype html><html lang="no"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Bli reiseskaper – tjen penger på reisene dine | Vagonto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@700&family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --ground:#F1F3EE;--surface:#FFFFFF;--surface-2:#E4EAE3;--band:#E4EAE3;
+  --ink:#143528;--ink-soft:#4C6558;--ink-faint:#7C9186;
+  --line:#DDE4DB;--line-strong:#C2CFC2;
+  --accent:#143528;--accent-ink:#FFFFFF;--hot:#17698F;--hot-soft:#DFEFF9;
+  --shadow:0 1px 2px rgba(57,57,57,.06),0 10px 30px rgba(57,57,57,.10);--radius:6px;--brand:#2E9BD6;--btn:#17698F;--btn-ink:#FFFFFF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1712;--surface:#16241D;--surface-2:#22322A;--band:#22322A;
+    --ink:#E7EEE8;--ink-soft:#A3B6AA;--ink-faint:#7A8D82;
+    --line:#2C3A33;--line-strong:#3E4E45;
+    --accent:#2E9BD6;--accent-ink:#08222F;--hot:#6EC1EA;--hot-soft:#10303F;
+    --shadow:0 1px 2px rgba(0,0,0,.45),0 12px 34px rgba(0,0,0,.42);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1712;--surface:#16241D;--surface-2:#22322A;--band:#22322A;
+  --ink:#E7EEE8;--ink-soft:#A3B6AA;--ink-faint:#7A8D82;
+  --line:#2C3A33;--line-strong:#3E4E45;
+  --accent:#2E9BD6;--accent-ink:#08222F;--hot:#6EC1EA;--hot-soft:#10303F;
+  --shadow:0 1px 2px rgba(0,0,0,.45),0 12px 34px rgba(0,0,0,.42);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Poppins","Segoe UI",Helvetica,Arial,sans-serif;font-size:16.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Poppins",Helvetica,Arial,sans-serif;margin:0;line-height:1.05;letter-spacing:-.02em;text-wrap:balance}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+:focus-visible{outline:2px solid var(--hot);outline-offset:3px}
+.wrap{width:min(1140px,calc(100% - 40px));margin-inline:auto}
+.spacer{flex:1}
+
+header.top{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--band) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar{display:flex;align-items:center;gap:20px;height:74px}
+.brand{display:flex;align-items:center;flex:none;color:var(--ink)}
+.lock{--H:38px;--d:calc(var(--H)/4);display:flex;align-items:center;gap:var(--d);color:var(--ink)}
+.lock svg{width:var(--H);height:var(--H);display:block;flex:none}
+.lock .ordm{font-family:"Familjen Grotesk","Poppins",Helvetica,sans-serif;font-weight:700;letter-spacing:-.045em;line-height:1;font-size:calc(var(--H)*.62);color:var(--ink);white-space:nowrap}
+.lock .ordm span{color:var(--brand)}
+.demo-chip{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);border:1px dashed var(--line-strong);padding:3px 8px}
+nav.main{display:flex;gap:20px;font-size:15px;color:var(--ink-soft)}
+nav.main a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;font-weight:600;font-size:15px;border-radius:var(--radius);transition:transform .12s ease,background .15s ease,border-color .15s ease,color .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--btn);color:var(--btn-ink)}
+.btn-dark{background:var(--accent);color:var(--accent-ink)}
+.btn-ghost{border:1px solid var(--line-strong)}
+.btn-ghost:hover{border-color:var(--hot);color:var(--hot)}
+.btn-lg{padding:14px 26px;font-size:16.5px}
+
+/* hero */
+.hero{padding:56px 0 40px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
+.kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--hot);margin-bottom:14px}
+.hero h1{font-size:clamp(38px,5.6vw,66px);font-weight:800;letter-spacing:-.04em}
+.hero .rytme{font-size:clamp(20px,2.4vw,26px);font-weight:700;color:var(--hot);letter-spacing:-.02em;margin:10px 0 0}
+.hero p{font-size:19px;color:var(--ink-soft);max-width:50ch;margin:20px 0 0}
+.hero .under{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+
+/* skjema */
+.form-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);display:grid;gap:14px}
+.form-card h2{font-size:22px;font-weight:700}
+.form-card p.sub{margin:0;color:var(--ink-soft);font-size:15px}
+label{display:block;font-size:13.5px;font-weight:600;margin-bottom:6px}
+input[type=text],input[type=url],input[type=email]{width:100%;padding:11px 13px;border:1px solid var(--line-strong);border-radius:var(--radius);background:var(--ground);color:var(--ink);font:inherit;font-size:15px}
+input:focus{border-color:var(--accent);outline:none}
+.hint{font-size:12.5px;color:var(--ink-faint);margin-top:6px}
+.takk{background:var(--hot-soft);border:1px solid var(--hot);color:var(--hot);padding:16px;border-radius:var(--radius);font-size:15px;display:none}
+.takk.vis{display:block}
+
+ol.pakkeliste{list-style:none;counter-reset:b;margin:0;padding:0;display:grid;gap:13px}
+ol.pakkeliste li{counter-increment:b;display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start}
+ol.pakkeliste li::before{content:counter(b);width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:12.5px;font-weight:700;display:grid;place-items:center;margin-top:2px}
+ol.pakkeliste b{grid-column:2;display:block;font-size:15.4px}
+ol.pakkeliste span{grid-column:2;display:block;font-size:14px;color:var(--ink-soft);line-height:1.4}
+
+/* steg */
+.section{padding:52px 0;border-bottom:1px solid var(--line)}
+.section h2.big{font-size:clamp(26px,3.4vw,36px);font-weight:700;letter-spacing:-.03em;max-width:22ch}
+.section p.lede{font-size:17.5px;color:var(--ink-soft);max-width:62ch;margin:14px 0 0}
+.steg{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);margin-top:30px;overflow:hidden}
+.steg > div{padding:24px 22px;border-right:1px solid var(--line)}
+.steg > div:last-child{border-right:0}
+.steg .num{font-size:12px;letter-spacing:.14em;color:var(--hot);font-weight:600}
+.steg h3{font-size:18.5px;margin:10px 0 8px;font-weight:700}
+.steg p{margin:0;font-size:14.8px;color:var(--ink-soft)}
+
+/* betaling */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.box h3{font-size:19px;font-weight:700;margin-bottom:10px}
+.box p{margin:0;color:var(--ink-soft);font-size:15.3px}
+.box.blue{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.box.blue p{color:inherit;opacity:.85}
+ul.liste{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+ul.liste li{display:flex;gap:10px;align-items:flex-start;font-size:15.3px;color:var(--ink-soft)}
+ul.liste svg{flex:none;margin-top:5px}
+
+/* konkurranse */
+.comp{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;box-shadow:var(--shadow);margin-top:30px}
+.comp .tag{display:inline-block;background:var(--hot-soft);color:var(--hot);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;padding:4px 9px;margin-bottom:11px}
+.comp h2{font-size:25px;font-weight:700}
+.comp p{margin:9px 0 0;color:var(--ink-soft);max-width:60ch;font-size:15.4px}
+.countdown{display:flex;gap:8px;margin-bottom:12px}
+.cd-unit{background:var(--surface-2);border:1px solid var(--line);padding:8px 12px;min-width:62px;text-align:center;border-radius:var(--radius)}
+.cd-unit b{display:block;font-size:22px;line-height:1.2;font-variant-numeric:tabular-nums}
+.cd-unit span{font-size:10px;color:var(--ink-faint);letter-spacing:.08em;text-transform:uppercase}
+
+/* faq */
+.faq{display:grid;gap:0;margin-top:26px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.faq summary{font-weight:600;font-size:16.5px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--hot);font-weight:700}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin:10px 0 0;color:var(--ink-soft);font-size:15.3px;max-width:70ch}
+
+footer{padding:34px 0 60px;color:var(--ink-faint);font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .hero-grid,.split,.steg,.comp{grid-template-columns:1fr}
+  .steg > div{border-right:0;border-bottom:1px solid var(--line)}
+  .steg > div:last-child{border-bottom:0}
+  nav.main,.demo-chip{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* trygghetsstripe */
+.trygg{border-top:1px solid var(--line);background:var(--surface);margin-top:44px}
+.trygg-in{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;padding:26px 0}
+.trygg-in > div{display:flex;gap:12px;align-items:flex-start}
+.trygg-in svg{width:22px;height:22px;flex:none;color:var(--hot);margin-top:2px}
+.trygg-in b{display:block;font-size:15px;margin-bottom:3px}
+.trygg-in span{font-size:13.5px;color:var(--ink-soft);line-height:1.4}
+.trygg .mer{padding:0 0 22px;font-size:13.5px;color:var(--ink-faint)}
+.trygg .mer a{color:var(--hot);font-weight:600}
+@media (max-width:900px){.trygg-in{grid-template-columns:1fr 1fr;gap:18px}}
+@media (max-width:560px){.trygg-in{grid-template-columns:1fr}}
+</style>
+<meta name="description" content="Legg ut reisen du har vært på, del den med andre, og få din del hver gang noen booker den.">
+<meta name="robots" content="noindex, nofollow"><!-- FJERNES VED LANSERING -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="chrome.css">
+</head>
+<body>
+<header class="vg-top"><div class="vg-in"><a class="vg-logo" href="index.html"><img src="img/vagonto-logo.png" alt="Vagonto"></a><nav class="vg-nav" aria-label="Hovedmeny"><a href="index.html">Forside</a><a href="reiseforslag.html">Reiseforslag</a><a href="smabyer.html">Småbyer</a><a href="montenegro.html">Montenegro</a><a href="pakk-reisen-selv.html">Pakk reisen selv</a><a href="bli-reiseskaper.html" aria-current="page">Bli reiseskaper</a><a href="om-oss.html">Om oss</a></nav><a class="vg-cta" href="https://booking.vagonto.com/no/">Book en reise</a></div></header>
+<header data-old hidden style="display:none" class="top">
+  <div class="wrap topbar">
+    <a class="brand" id="brandLink" href="#top" aria-label="Vagonto">
+      <span class="lock" style="--H:38px"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="15" cy="47" r="8" fill="none" stroke="currentColor" stroke-width="4.5"/><path d="M21.5 41.5 C29 38.5, 25.5 31.5, 33 30.5 C40 29.5, 38.5 24.5, 43.5 21.5" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><circle cx="49" cy="17" r="8" fill="var(--brand)"/></svg><span class="ordm">VAGONT<span>O</span></span></span>
+    </a>
+    <nav class="main">
+      <a id="tilbakeLink" href="#top">Reiseforslag</a>
+      <a id="pakkSelvLenke" href="#">Pakk reisen selv</a>
+      <a href="#slik">Slik virker det</a>
+      <a href="#betaling">Hva du tjener</a>
+      <a href="#sporsmal">Spørsmål</a>
+      <a data-om href="#">Om oss</a>
+    </nav>
+    <div class="spacer"></div>
+    <span class="demo-chip">Demo</span>
+    <a class="btn btn-dark" data-start href="#">Pakk reisen selv</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">For deg som vil tjene på reisene dine</div>
+      <h1>Pakk reiser andre kan booke.</h1>
+      <p class="rytme">Lag. Del. Tjen.</p>
+      <p>Har du vært på en tur du fortsatt snakker om? Sett den sammen på nytt, så andre kan oppleve den. Eller lag drømmereisen du selv har lyst på. Det kan være en lang rundreise, en helg i en by eller bare det ene hotellet du alltid kommer tilbake til — vi selger reisen, og du får din del hver gang noen booker den.</p>
+      <div class="under">
+        <a class="btn btn-primary btn-lg" data-start href="#">Pakk din første reise</a>
+        <a class="btn btn-ghost btn-lg" href="#slik">Se hvordan det virker</a>
+      </div>
+      <p class="hint" style="margin-top:16px">Helt gratis, og ingenting blir bestilt før noen faktisk kjøper. Prøv deg fram, slett og begynn på nytt så mye du vil.</p>
+    </div>
+
+    <div class="form-card">
+      <h2>Sånn gjør du det</h2>
+      <p class="sub">Det tar omtrent like lang tid som å bestille en ferie til deg selv.</p>
+      <ol class="pakkeliste">
+        <li><b>Velg hva reisen skal være</b><span>En rundreise på tre uker, en storbyhelg — eller bare favoritthotellet ditt med fly til og fra. Så stort eller lite du vil.</span></li>
+        <li><b>Velg stedene og nettene</b><span>Ett sted eller åtte. Finn hotellet du bodde på — eller det du skulle ønske du hadde valgt.</span></li>
+        <li><b>Legg til det dere gjorde</b><span>Utflukter, konsertbilletter, leiebil, båtturen. Alt ligger klart.</span></li>
+        <li><b>Fortell hvorfor</b><span>Én setning per sted. «Bo her, ikke der» er hele poenget.</span></li>
+        <li><b>Legg den ut og del den</b><span>Reisen får sin egen lenke. Del den på Instagram, TikTok, Facebook — der du vil — så tjener du.</span></li>
+      </ol>
+      <a class="btn btn-primary btn-lg" data-start href="#">Kom i gang</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="slik">
+  <div class="wrap">
+    <h2 class="big">Du pakker reisen. Vi selger den og tar ansvaret.</h2>
+    <p class="lede">Du trenger ikke være reisebyrå eller kunne noe om bransjen. Du bruker det samme verktøyet som byråene, gratis — vi tjener først når reisen din blir solgt.</p>
+    <div class="steg">
+      <div>
+        <div class="num">STEG 01</div>
+        <h3>Opprett konto</h3>
+        <p>Tar ett minutt, koster ingenting. Så har du din egen side med reisene dine.</p>
+      </div>
+      <div>
+        <div class="num">STEG 02</div>
+        <h3>Pakk reisen</h3>
+        <p>Stort eller lite: ett hotell med fly til, eller en rundreise med åtte stopp. Alle priser er ekte og oppdaterte — det du setter sammen, kan faktisk bookes.</p>
+      </div>
+      <div>
+        <div class="num">STEG 03</div>
+        <h3>Legg den ut som din</h3>
+        <p>Navnet ditt, bildene dine og dine egne ord. Vi ser over reisen før den legges ut, så alt henger sammen.</p>
+      </div>
+      <div>
+        <div class="num">STEG 04</div>
+        <h3>Del lenken din</h3>
+        <p>Del den på Instagram, TikTok, Facebook, i bloggen eller i familiechatten — der du vil. Alle som booker gjennom lenken din, teller som ditt salg.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="betaling">
+  <div class="wrap">
+    <h2 class="big">Du får betalt når noen faktisk reiser</h2>
+    <p class="lede">Ikke for klikk, ikke for visninger, ikke for at noen oppretter en konto. Du får en del av det reisen selges for.</p>
+    <div class="split">
+      <div class="box blue">
+        <h3>Din del av hvert salg</h3>
+        <p>Pengene kommer én gang i måneden, med oversikt over hva som ble solgt. Reisen blir liggende ute og kan selges om og om igjen — også lenge etter at innlegget ditt er glemt.</p>
+      </div>
+      <div class="box">
+        <h3>Vi tar oss av resten</h3>
+        <ul class="liste">
+          <li><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7.5l3.2 3.2L12 3.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Avtalene med hotellene, flyselskapene og de lokale</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7.5l3.2 3.2L12 3.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Priser, betaling og faktura</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7.5l3.2 3.2L12 3.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>All kontakt med den som reiser, før, under og etter turen</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7.5l3.2 3.2L12 3.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Reisegarantien, så den som reiser er trygg og du slipper ansvaret</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="comp">
+      <div>
+        <span class="tag">Trekning 20. desember</span>
+        <h2>Beste reise vinner sin egen tur</h2>
+        <p>Alle reiser som legges ut før 20. desember er med i trekningen. Vinneren får sin egen reise betalt av oss — og reisen din tjener penger uansett hvordan det går.</p>
+      </div>
+      <div>
+        <div class="countdown" id="countdown" aria-label="Tid igjen til trekningen"></div>
+        <a class="btn btn-primary" style="width:100%" data-start href="#">Pakk reisen din</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sporsmal">
+  <div class="wrap">
+    <h2 class="big">Spørsmål vi får</h2>
+    <div class="faq">
+      <details>
+        <summary>Må jeg kunne noe om reisebransjen?</summary>
+        <p>Nei. Du finner fly, hotell og opplevelser og velger det du vil ha, akkurat som når du bestiller din egen ferie. Klarer du det, klarer du dette.</p>
+      </details>
+      <details>
+        <summary>Hvor lang tid tar det å lage én reise?</summary>
+        <p>Har du vært der selv, holder det med en kveld på sofaen. Det vanskeligste er å bestemme hva som ikke skal være med.</p>
+      </details>
+      <details>
+        <summary>Hva skjer når prisene endrer seg?</summary>
+        <p>Det ordner seg selv. Prisen regnes ut på nytt hver gang noen sjekker sine egne datoer — du trenger ikke røre noe.</p>
+      </details>
+      <details>
+        <summary>Må jeg ha mange følgere?</summary>
+        <p>Nei. En god reise blir booket av folk som aldri har hørt om deg — den ligger ute hos oss og blir funnet av seg selv. Har du følgere, går det bare fortere.</p>
+      </details>
+      <details>
+        <summary>Hvem har ansvaret hvis noe går galt på reisen?</summary>
+        <p>Vi. Det er vi som er reisearrangør, tar imot pengene og har reisegarantien. Du får ingen telefoner fra dem som reiser, og du har ikke noe ansvar for turen deres.</p>
+      </details>
+      <details>
+        <summary>Kan jeg endre eller fjerne reisen etterpå?</summary>
+        <p>Ja, når som helst. Bytt hotell, endre antall netter, eller ta den bort. Det er din reise, med ditt navn på.</p>
+      </details>
+      <details>
+        <summary>Hva koster det meg?</summary>
+        <p>Ingenting. Verken kontoen eller verktøyet koster noe. Bare kos deg.</p>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+<section class="trygg">
+  <div class="wrap trygg-in">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+      <span><b>Reisegaranti</b><span>Alle reiser er dekket av reisegaranti.</span></span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 19l2-5 8-3-1-2-8 2-4-5-2 1 2 5-3 1-2-2-1 1 3 4z"/></svg>
+      <span><b>IATA-billettering</b><span>Vi utsteder flybillettene selv, uten mellomledd.</span></span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h4l2 5-2.5 1.5a12 12 0 005 5L16 12l5 2v4a2 2 0 01-2 2A16 16 0 014 5a2 2 0 012-2z"/></svg>
+      <span><b>Kundeservice i Norge</b><span>Folk på norsk, før, under og etter reisen.</span></span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2"/></svg>
+      <span><b>Én bestilling</b><span>Fly, hotell og opplevelser i ett kjøp — vi ordner opp om noe skjer.</span></span></div>
+  </div>
+  <div class="wrap mer">Vagonto er et norsk reiseselskap. <a data-om href="#">Les om oss og folkene bak &rarr;</a></div>
+</section>
+
+<footer data-old hidden style="display:none">
+  <div class="wrap foot">
+    <div>
+      <div style="margin-bottom:9px"><span class="lock" style="--H:30px"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="15" cy="47" r="8" fill="none" stroke="currentColor" stroke-width="4.5"/><path d="M21.5 41.5 C29 38.5, 25.5 31.5, 33 30.5 C40 29.5, 38.5 24.5, 43.5 21.5" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><circle cx="49" cy="17" r="8" fill="var(--brand)"/></svg><span class="ordm">VAGONT<span>O</span></span></span></div>
+      Vagonto AS · Oslo · Norway
+    </div>
+    <div style="max-width:46ch">Prototype. Navn og eksempler på siden er oppdiktede.</div>
+  </div>
+</footer>
+<script>
+/* Om-siden. I produksjon: /om-oss */
+const OM_URL="om-oss.html";
+document.addEventListener("DOMContentLoaded",()=>document.querySelectorAll("[data-om]").forEach(a=>{a.href=OM_URL;}));
+/* Lenke tilbake til forsiden. I produksjon: "/" — i demoen artifact-adressen. */
+const FORSIDE="reiseforslag.html";
+document.getElementById("tilbakeLink").href=FORSIDE;
+document.getElementById("brandLink").href=FORSIDE;
+
+/* Registrering og reiseplanlegger ligger i motoren. */
+const PAKK_SELV_URL="pakk-reisen-selv.html";
+const START_URL="https://booking.vagonto.com/no/?tripType=TRIP_PLANNER";
+(function(){const a=document.getElementById("pakkSelvLenke");if(a)a.href=PAKK_SELV_URL;})();
+document.querySelectorAll("[data-start]").forEach(a=>{a.href=START_URL;a.target="_blank";a.rel="noopener";});
+
+function countdown(){
+  const now=new Date();
+  let mål=new Date(now.getFullYear(),11,20,12,0,0);
+  if(mål<now)mål=new Date(now.getFullYear()+1,11,20,12,0,0);
+  const d=mål-now;
+  const dager=Math.floor(d/864e5),timer=Math.floor(d/36e5)%24,min=Math.floor(d/6e4)%60;
+  document.getElementById("countdown").innerHTML=[[dager,"dager"],[timer,"timer"],[min,"min"]]
+    .map(([v,l])=>`<span class="cd-unit"><b>${String(v).padStart(2,"0")}</b><span>${l}</span></span>`).join("");
+}
+countdown();
+setInterval(countdown,30000);
+</script>
+
+
+<footer class="vg-foot"><div class="vg-in"><div><a href="index.html"><img src="img/vagonto-logo.png" alt="Vagonto"></a>Vagonto AS · Oslo · Norway</div><div><a href="mailto:info@vagonto.com">info@vagonto.com</a><br><a href="tel:+4723910595">23 91 05 95</a></div><nav><a href="om-oss.html">Om oss</a><a href="bli-reiseskaper.html">Bli reiseskaper</a><a href="https://booking.vagonto.com/no/">Til bookingen</a></nav></div></footer>
+</body></html>

@@ -1,0 +1,28 @@
+/* Felles meny og bunnlinje for alle sider på vagonto.com.
+   Klassene har prefiks vg- så de ikke kolliderer med sidenes egne stiler. */
+.vg-top{position:sticky;top:0;z-index:1000;background:rgba(244,246,241,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid #DDE4DB;font-family:"Poppins","Segoe UI",Helvetica,Arial,sans-serif}
+.vg-in{max-width:1180px;margin:0 auto;padding:0 20px;min-height:68px;display:flex;align-items:center;gap:26px;box-sizing:border-box}
+.vg-logo{display:block;flex:none;line-height:0}
+.vg-logo img{height:26px;width:auto;display:block}
+.vg-nav{display:flex;gap:20px;font-size:14.5px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.vg-nav::-webkit-scrollbar{display:none}
+.vg-nav a{color:#4C6558;text-decoration:none;padding:8px 0;border-bottom:2px solid transparent}
+.vg-nav a:hover{color:#143528}
+.vg-nav a[aria-current="page"]{color:#143528;font-weight:600;border-bottom-color:#2E9BD6}
+.vg-cta{margin-left:auto;flex:none;background:#17698F;color:#fff!important;border-radius:999px;padding:10px 18px;font-weight:600;font-size:14.5px;text-decoration:none;white-space:nowrap}
+.vg-cta:hover{background:#125676}
+@media (max-width:900px){
+  .vg-in{flex-wrap:wrap;gap:6px 16px;padding:10px 16px;min-height:0}
+  .vg-nav{order:3;width:100%;gap:18px;font-size:14px}
+  .vg-cta{padding:8px 14px;font-size:13.5px}
+}
+
+.vg-foot{margin-top:56px;border-top:1px solid #DDE4DB;background:#F4F6F1;color:#4C6558;font-family:"Poppins","Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.6}
+.vg-foot .vg-in{align-items:flex-start;flex-wrap:wrap;gap:24px 48px;padding-top:30px;padding-bottom:40px}
+.vg-foot img{height:22px;width:auto;display:block;margin-bottom:10px}
+.vg-foot a{color:#143528;text-decoration:none}
+.vg-foot a:hover{color:#17698F}
+.vg-foot nav{display:flex;flex-direction:column;gap:4px}
+.vg-foot .vg-small{color:#7C9186;font-size:12.5px}
+.vg-top,.vg-foot,.vg-in,.vg-nav{min-width:0}
+.vg-top,.vg-foot{max-width:100%}
