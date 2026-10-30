@@ -1,0 +1,3 @@
+# Stengt til lansering – erstattes med Allow + sitemap ved lansering
+User-agent: *
+Disallow: /
