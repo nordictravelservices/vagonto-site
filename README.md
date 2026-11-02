@@ -50,7 +50,25 @@ avklares med TC-support.
 
 ## Deploy
 
-Netlify, koblet direkte til dette repoet. Hver push til `main` publiseres
-automatisk. Ingen server, ingen byggesteg (publish directory = repo-roten).
-DNS ligger i Domeneshop: `@` → A `75.2.60.5`, `www` → CNAME til
-Netlify-sitens `*.netlify.app`-adresse. SSL lages automatisk av Netlify.
+Egen server (GoDaddy VPS «tripilio», cPanel, IP `92.205.161.222`).
+Hver push til `main` laster filene opp over SFTP til cPanel-kontoen
+`vagonto` (`/home/vagonto/public_html`) via `.github/workflows/deploy.yml`.
+Hemmeligheter i repoet: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
+Ingen byggesteg. SSL kommer fra cPanel AutoSSL (Let's Encrypt).
+
+DNS i Domeneshop: `@` og `www` → A `92.205.161.222`,
+`booking` → A `137.116.211.8` (Travel Compositor).
+E-post: `info@vagonto.com` er Domeneshop-videresending til Nordic Travel Services.
+
+Flyttet fra Netlify 2. nov 2026 (prosjektet der er slettet).
+
+### Ny nettside på samme server (10 minutter)
+
+1. GoDaddy → serveren → Accounts → **Create**: domene, brukernavn, passord,
+   e-post, pakke `default`.
+2. GitHub-repo med samme `deploy.yml`; legg inn de tre hemmelighetene
+   (server-IP, brukernavnet, passordet) og bytt `remote_path` til
+   `/home/<brukernavn>/public_html`.
+3. Domeneshop: `@` og `www` → A `92.205.161.222`.
+4. Push. AutoSSL henter sertifikat innen en time (eller WHM → Manage AutoSSL
+   → Manage Users → «Check» på brukeren).
