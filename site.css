@@ -93,7 +93,7 @@ section{margin-top:52px}
 
 /* trip cards */
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.cards.c3{grid-template-columns:repeat(3,1fr)}
+@media (min-width:1001px){.cards.c3{grid-template-columns:repeat(3,1fr)}}
 .card{position:relative;display:flex;flex-direction:column;background:var(--surface);border-radius:var(--r);overflow:hidden;border:1px solid var(--line);transition:transform .16s ease,box-shadow .16s ease}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .card .ph{position:relative;aspect-ratio:4/3;overflow:hidden}
@@ -149,3 +149,11 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;display
 
 /* mobil: to-kolonners blokker inne i .crew bryter til én kolonne */
 @media (max-width:600px){.crew [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}}
+/* mobil: kortene i seksjonene sveipes sidelengs i stedet for én lang liste */
+@media (max-width:560px){
+  .cards.c3{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-inline:-16px;padding:2px 16px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .cards.c3::-webkit-scrollbar{display:none}
+  .cards.c3>.card{flex:0 0 78%;scroll-snap-align:center}
+  .float .chip{display:none}
+  section{margin-top:40px}
+}
