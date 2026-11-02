@@ -1,0 +1,36 @@
+name: Deploy vagonto.com
+
+# Laster opp siden til egen server (cPanel, FTP) ved hver push til main.
+# Hemmeligheter i repoet (Settings > Secrets and variables > Actions):
+#   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
+# Kun filer som er endret lastes opp. Filer på serveren som ikke kommer
+# herfra (f.eks. .htaccess for passordbeskyttelse) blir liggende.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Last opp til serveren
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          server-dir: public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            README.md
