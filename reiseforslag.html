@@ -284,7 +284,7 @@ footer{border-top:1px solid var(--line);margin-top:46px;padding:30px 0 56px;colo
     <nav class="hovedmeny">
       <a href="#forslag">Reiseforslag</a>
       <a href="#influenser">Reiseskaperne</a>
-      <a href="#konkurranse">Konkurransen</a>
+
       <a data-pakkselv href="#">Pakk reisen selv</a>
       <a data-skaper href="#">Bli reiseskaper</a>
       <a data-om href="#">Om oss</a>
@@ -368,17 +368,6 @@ footer{border-top:1px solid var(--line);margin-top:46px;padding:30px 0 56px;colo
     </div>
   </div>
 
-  <div class="comp" id="konkurranse">
-    <div>
-      <span class="tag">Trekning 20. desember</span>
-      <h2>Beste reiseforslag vinner sin egen tur</h2>
-      <p>Sett sammen drømmereisen din, gi den et navn og publiser den her. Alle publiserte forslag er med i trekningen 20. desember — og blir turen din solgt til andre, tjener du på hvert salg uansett om du vinner eller ikke.</p>
-    </div>
-    <div>
-      <div class="countdown" id="countdown" aria-label="Tid igjen til trekningen"></div>
-      <a class="btn btn-primary" style="width:100%" data-home href="#">Pakk reisen selv</a>
-    </div>
-  </div>
 
   <div class="how-intro">
     <h2>Er du reiseinfluenser — eller bare glad i å reise?</h2>
@@ -691,7 +680,7 @@ document.addEventListener("click",e=>{
 },true);
 document.querySelectorAll("[data-home]").forEach(a=>{a.target="_blank";a.rel="noopener";});
 
-function countdown(){
+function countdown(){if(!document.getElementById("countdown"))return;
   const now=new Date();
   let mål=new Date(now.getFullYear(),11,20,12,0,0);
   if(mål<now)mål=new Date(now.getFullYear()+1,11,20,12,0,0);
