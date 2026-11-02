@@ -10,7 +10,7 @@ satt som standarddomene på Airticket Collective-micrositen).
 
 | Fil | Innhold |
 |---|---|
-| `index.html` | Forsiden fra oktober («Din reise, satt sammen av deg») |
+| `index.html` | Forsiden («Din reise, satt sammen av deg») – v5 2. nov: Byer du ikke har vært i, Sommer i vinter, Populære nå |
 | `reiseforslag.html` | Første forside fra september (reiseskapere og reisekort) |
 | `akkurat-na.html` | «Akkurat nå» – samleside i menyen for sesongens steder og kampanjer |
 | `smabyer.html` | Småbyer (under Akkurat nå, ikke i menyen) |
